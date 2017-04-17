@@ -1,0 +1,183 @@
+html {
+	font-family: Raleway;
+	 -webkit-text-size-adjust: 100%;
+     -ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	color: #252527;
+}
+
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+  color: #777;
+}
+
+h1 {
+font-family: ;
+font-weight:;
+color: ;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+
+}
+
+ul {
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+
+}
+
+img {
+	border: 0;
+}
+
+.container {
+height: auto;
+width: auto;
+
+}
+
+.sidebar-nav {
+	background-color: #eee;
+	border-top:;
+	width: 300px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	z-index:100;
+	border-top: 3px black solid;
+	overflow: auto;
+}
+
+.sidebar-nav > li{
+
+}
+
+.inner-wrap {
+	width: auto;
+	height:auto;
+	margin: 0;
+	border: 0;
+	top: 0;
+	left: 0;
+}
+
+.inner-wrap h1 a {
+	color:#222;
+	font-size:38px;
+	padding:25px;
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+.logo {
+	display: block;
+    margin: 0 auto;
+}
+
+.menu {
+text-align: center;
+font-size: 20px;
+color: black;
+
+}
+.menu ul {
+border-top: 1px solid rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    margin-bottom: 20px;
+}
+
+.menu li {
+
+}
+
+.menu a {
+text-decoration: none;
+color: #777;
+}
+
+.menu ul li a {
+	width: 87%;
+	padding: 20px;
+	display: inline-block;
+	color: black;
+	border: 0;
+	font-size: 20px;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(255,255,255,0.04);
+    text-align: center;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.menu ul li a:hover {
+color: white;
+background-color: #777;
+}
+
+.socials {
+	margin-top: 48px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.email-button {
+	width: auto;
+	font-weight: 700;
+	font-size: 12px;
+	padding: 0 28px;
+    border-radius: 4px;
+    border: 1px black solid;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    height: 39px;
+    margin-bottom: 16px;
+    transition: .6s;
+}
+
+.email-button:hover {
+padding: 0 32px;
+color: #fff;
+background-color: #777;
+border: 1px #777 solid;
+}
+
+.button-open {
+	display: none;
+}
+
+.mobile-menu {
+	display: none;
+}
