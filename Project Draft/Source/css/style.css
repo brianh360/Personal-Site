@@ -1,10 +1,11 @@
 html {
-	font-family: Raleway;
+	font-family: Arial, Helvetica, sans-serif;
 	 -webkit-text-size-adjust: 100%;
      -ms-text-size-adjust: 100%;
 }
 
 body {
+	font-family: karla;
 	margin: 0;
 	color: #252527;
 }
@@ -61,13 +62,19 @@ img {
 .container {
 height: auto;
 width: auto;
+display: block;
+width: 100%;
+height: 2500px;
 
 }
 
 .sidebar-nav {
-	background-color: #eee;
-	border-top:;
-	width: 300px;
+/*	sidebar-background.png
+*//*	background: url(http://demo.qodeinteractive.com/bridge93/wp-content/uploads/2015/05/menu-image.jpg) fixed;
+*/	background: url(sidebarbackground5.png) fixed no-repeat;
+/*	background-color: #eee;
+*/	border-top:;
+	width: 290px;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -93,8 +100,8 @@ width: auto;
 .inner-wrap h1 a {
 	color:#222;
 	font-size:38px;
-	padding:25px;
-	text-transform: uppercase;
+/*	padding:25px;
+*/	text-transform: uppercase;
 	display: block;
 	text-decoration: none;
 	text-align: center;
@@ -102,7 +109,10 @@ width: auto;
 
 .logo {
 	display: block;
-    margin: 0 auto;
+    margin: 0;
+    margin-left: 90px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .menu {
@@ -130,9 +140,9 @@ color: #777;
 	width: 87%;
 	padding: 20px;
 	display: inline-block;
-	color: black;
+	color: #e8e7e9;
 	border: 0;
-	font-size: 20px;
+	font-size: 24px;
 	text-transform: uppercase;
 	border-bottom: 1px solid rgba(0,0,0,0.3);
     border-top: 1px solid rgba(255,255,255,0.04);
@@ -142,7 +152,15 @@ color: #777;
 }
 
 .menu ul li a:hover {
-color: white;
+color: #203975;
+background-color: #e8e7e9;
+font-weight: 500;
+border: 1px #222 solid;
+border-radius: 4px;
+}
+
+.menu ul li a:active {
+color: black;
 background-color: #777;
 }
 
@@ -153,25 +171,28 @@ background-color: #777;
 }
 
 .email-button {
-	width: auto;
-	font-weight: 700;
-	font-size: 12px;
-	padding: 0 28px;
+color: #e8e7e9;
+    background: rgba(70, 114, 232, 0.11);
+    width: auto;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 13px 45px;
     border-radius: 4px;
-    border: 1px black solid;
-    text-transform: uppercase;
+/*    border: 1.px #4672e8 solid;
+*/    text-transform: uppercase;
     cursor: pointer;
     letter-spacing: 1px;
-    height: 39px;
+    height: 45px;
     margin-bottom: 16px;
-    transition: .6s;
+    transition: .9s;
 }
 
 .email-button:hover {
 padding: 0 32px;
-color: #fff;
-background-color: #777;
-border: 1px #777 solid;
+color: #e8e7e9;
+background-color: #4672e8;
+border: 1px #4672e8 solid;
+font-size: 18px;
 }
 
 .button-open {
@@ -180,4 +201,25 @@ border: 1px #777 solid;
 
 .mobile-menu {
 	display: none;
+}
+
+.about-panel {
+	background: #eee;
+	width: auto;
+	height: auto;
+	margin: 0;
+	top: 0;
+	left: 0;
+/*	position: fixed;
+*/	display: flex;
+	flex-direction: row;
+
+	margin-left: 290px;
+    width: 100%;
+    height: 500px;
+}
+
+.inner-about-panel {
+width: 100%;
+flex: 1;
 }
