@@ -59,13 +59,60 @@ img {
 	border: 0;
 }
 
+.hero {
+	font-size: 64px;
+	font-family: canada-type-gibson,sans-serif;
+	line-height: 64px;
+	color: #e8e7e9;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.sub-head {
+	font-size: 32px;
+	font-family: Montserrat;
+	line-height: 38px;
+	color: #e8e7e9;
+	font-weight: 400;
+	margin-left: 50px;
+	margin-top: -2%;
+	text-transform: lowercase;
+}
+
+.point {
+	color: #4672e8;
+	font-size: 52px;
+}
+
+.button {
+    color: #e8e7e9;
+    background: rgba(70, 114, 232, 0.11);
+    width: auto;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 13px 45px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    height: 45px;
+}
+
+.button:hover {
+padding: 0 32px;
+color: #e8e7e9;
+background-color: #4672e8;
+border: 1px #4672e8 solid;
+font-size: 18px;
+
+}
+
 .container {
 height: auto;
 width: auto;
 display: block;
 width: 100%;
 height: 2500px;
-
 }
 
 .sidebar-nav {
@@ -152,11 +199,11 @@ color: #777;
 }
 
 .menu ul li a:hover {
-color: #203975;
-background-color: #e8e7e9;
-font-weight: 500;
-border: 1px #222 solid;
-border-radius: 4px;
+	color: #fff;
+/*	background-color: rgba(232, 231, 233, 0.65);
+*/	font-weight: 500;
+	border: 1px #222 solid;
+	border-radius: 4px;
 }
 
 .menu ul li a:active {
@@ -205,21 +252,77 @@ font-size: 18px;
 
 .about-panel {
 	background: #eee;
-	width: auto;
-	height: auto;
 	margin: 0;
 	top: 0;
 	left: 0;
-/*	position: fixed;
-*/	display: flex;
+	position: relative;
+	display: flex;
 	flex-direction: row;
-
 	margin-left: 290px;
     width: 100%;
     height: 500px;
 }
 
 .inner-about-panel {
-width: 100%;
+	background: url(Aboutpanelbackground1.png);
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex: 1;
+	justify-content: center;
+    align-items: center;
+    background-position: 122% 47%;
+}
+
+.about-content {
 flex: 1;
+margin-left: 48px;
+width: 40%;
+}
+
+.about-button {
+	    color: #e8e7e9;
+    background: rgba(70, 114, 232, 0.11);
+    width: auto;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 13px 45px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    height: 45px;
+    margin-bottom: 16px;
+    transition: .9s;
+    margin-left: 83px;
+    margin-top: 27px;
+}
+
+.about-button:hover {
+	padding: 0 32px;
+color: #e8e7e9;
+background-color: #4672e8;
+border: 1px #4672e8 solid;
+font-size: 18px;
+}
+
+.services-panel {
+	background: #eee;
+	margin: 0;
+	top: 0;
+	left: 0;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	margin-left: 290px;
+    width: 100%;
+    height: 500px;
+}
+
+.inner-services-panel {
+
+}
+
+.services-content {
+
 }
