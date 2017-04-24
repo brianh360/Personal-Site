@@ -18,6 +18,7 @@
 <!-- Sidebar -->
     <header class="sidebar-nav">
       <div class="inner-wrap">
+        <span class="hide-nav">&larr;</span>
      <h1 title="Brian T. Hurst">
         <a href="#"><img src="Source/css/logo4.png" class="logo" width="115px" height="72px"></a>
      </h1>
@@ -41,12 +42,12 @@
       </div>
     </header>
 
-      <div class="about-panel">
+      <div class="about-panel panel">
         <div class="inner-about-panel">
           <div class="about-content">
 
                 <h1 class="hero">Brian Hurst</h1><br>
-                <h2 class="sub-head">I'm a <span class="hl">Creative</span> Web Tech<span class="point">.</span></h2>
+                <h2 class="sub-head">I'm a <span style="color:#fff;">Creative</span> Web Tech<span style="color:#fff">.</span></h2>
 
                   
 
@@ -65,7 +66,7 @@
         </div>  
       </div>
 
-      <div class="services-panel">
+      <div class="services-panel panel">
         <div class="inner-services-panel">
           <span class="services-marker">Services</span>
           <div class="services-content">
@@ -119,21 +120,69 @@
 
         </div>
         </div>
-        <div class="motivation-panel">
+        <div class="motivation-panel panel">
                <div class="services-text">
           <h2 class="service-inner-text"><span class="hl hero">Lorem Ipsum is simply.</span></h2>
             <p class="service-inner-sub-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
         </div>
 
-        <div class="portfolio-panel">
+        <div class="portfolio-panel panel">
           <div class="inner-portfolio-panel">
-            <div class="portfolio-sm "></div>
-            <div class="portfolio-lg"></div>
-            <div class="portfolio-sm"></div>
+
+            <div class="portfolio-sm portfolio-img-sm portfolio-img-sm-1">
+              <div class="portfolio-text-outer">
+                <div class="portfolio-text">
+                  <p>3 kilos</p>
+                </div>
+              </div>
+              </div>
+
+            <div class="portfolio-lg portfolio-img-lg portfolio-img-lg-1"></div>
+            <div class="portfolio-sm portfolio-img-sm portfolio-img-sm-2"></div>
           </div>
         </div> 
       
+      <div class="contact-panel panel">
+        <div class="contact-panel-inner">
+        <div class="contact-me">
+          <div class="col-md-5">
+    <div class="form-area">  
+        <form role="form">
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+            <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+                    <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+                    </div>
+            
+        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+        </form>
+    </div>
+</div>
+</div>
+          <div class="testimonials-outer">
+            <div class="testimonials-inner">
+              <div class="testimonials-carousel">
+                <p class="testimonials-text">"Shoot your shot"</p>
+                <p class="testimonials-author">- James "The Bearded One" Harden</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
     <footer></footer>
     </div>
