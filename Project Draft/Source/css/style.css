@@ -1,11 +1,11 @@
 html {
-	font-family: sans-serif, PT Sans, Helvetica, sans-serif;
+	font-family: Lato, Helvetica Neue,Helvetica,Arial,sans-serif;
 	 -webkit-text-size-adjust: 100%;
      -ms-text-size-adjust: 100%;
 }
 
 body {
-	font-family: sans-serif, karla, PT Sans;
+	font-family: Lato, Helvetica Neue,Helvetica,Arial,sans-serif;
 	margin: 0;
 	color: #252527;
 	overflow:;
@@ -88,6 +88,7 @@ color: #747474;
 /*	text-transform: lowercase;
 */}
 
+
 .hl {
 	color: #4672e8;
 }
@@ -128,12 +129,9 @@ height: 2500px;
 }
 
 .sidebar-nav {
-/*	sidebar-background.png
-*//*	background: url(http://demo.qodeinteractive.com/bridge93/wp-content/uploads/2015/05/menu-image.jpg) fixed;
-*/	background: url(sidebarbackground5.png) fixed no-repeat;
-/*	background-color: #eee;
-*/	border-top:;
-	width: 290px;
+	background-color: rgb(29, 58, 84);
+/*	background: url(sidebarbackground5.png) fixed no-repeat;
+*/	width: 250px;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -237,20 +235,18 @@ color: #e8e7e9;
     font-size: 13px;
     padding: 13px 45px;
     border-radius: 4px;
-    text-transform: uppercase;
     cursor: pointer;
-    letter-spacing: 1px;
     height: 45px;
     margin-bottom: 16px;
     transition: .9s;
 }
 
 .email-button:hover {
-padding: 0 32px;
 color: #e8e7e9;
-background-color: #4672e8;
-border: 1px #4672e8 solid;
-font-size: 18px;
+background-color: #3071a9;
+border-color: #285e8e;
+border-radius: 4px;
+font-family: Arial;
 }
 
 .button-open {
@@ -263,27 +259,21 @@ font-size: 18px;
 
 .about-panel {
 	background: #eee;
-	margin: 0;
-	top: 0;
-	left: 0;
-	position: relative;
 	display: flex;
 	flex-direction: row;
-	margin-left: 290px;
-/*    width: 100%;
-*/    height: 500px;
+    height: 500px;
 }
 
 .inner-about-panel {
-/*	url(http://www.pascalvangemert.nl/view/images/background.jpg) 122% 47% no-repeat rgb(160, 206, 78)
-*/	background: rgb(160, 206, 78) url(http://www.pascalvangemert.nl/view/images/background.jpg)no-repeat;
+/*	background: rgb(160, 206, 78) url(http://www.pascalvangemert.nl/view/images/background.jpg)no-repeat;
+*/	
+    background: url(https://blackrockdigital.github.io/startbootstrap-landing-page//img/intro-bg.jpg) no-repeat center center;) no-repeat center center;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	flex: 1;
 	justify-content: center;
     align-items: center;
-    background-position: 364% 42%;
 }
 
 .about-content {
@@ -293,7 +283,7 @@ text-align: center;
 }
 
 .about-button {
-	    color: #e8e7e9;
+	color: #e8e7e9;
     background: rgba(70, 114, 232, 0.11);
     width: auto;
     font-weight: 700;
@@ -372,11 +362,6 @@ font-size: 18px;
 
 .services-panel {
 	background-color: #f9f9f9;
-	margin: 0;
-	top: 0;
-	left: 0;
-	position: relative;
-	margin-left: 290px;
     width: auto;
     height: 700px;
 }
@@ -459,13 +444,15 @@ font-family: inherit;
 color:#747474;
 text-align: center;
 margin-bottom: 48px;
+padding: 16px;
 }
 
 .read-more {
 	color: #fff;
 	font-weight: 600;
 	padding: 19px 29px;
-	background-color: #777;
+	    background-color: #316492 !important;
+    border: 1px solid #316492;
 	font-size: 16px;
 	border-radius: 4px;
 
@@ -475,6 +462,19 @@ margin-bottom: 48px;
 cursor: pointer;
 
 
+}
+
+.hide-nav {
+	position: absolute;
+	color: white;
+	font-size:24px;
+	font-weight: bold;
+	right: 0;
+	top: 95%;
+}
+
+.hide-nav:hover {
+	cursor: pointer;
 }
 
 .service-inner-text {
@@ -496,13 +496,8 @@ font-size: 38px;
 
 .motivation-panel {
 	background: #f9f9f9;
-	margin: 0;
-	top: 0;
-	left: 0;
-	position: relative;
 	display: flex;
 	flex-direction: row;
-	margin-left: 290px;
 	height: auto;
 }
 
@@ -511,8 +506,8 @@ font-size: 38px;
 	margin: 0;
 	top: 0;
 	left: 0;
-	margin-left: 290px;
-	height: 700;
+	height: auto;
+
 }
 
 .inner-portfolio-panel {
@@ -525,10 +520,214 @@ font-size: 38px;
 */}
 
 .portfolio-sm {
-flex: 1;
+	flex: 1;
+/*	border: 1px black solid;
+*/	padding-bottom: 16px;
+	width: auto;
+	height: 300px;
+	margin: 64px 16px;
+}
 
+.portfolio-img-sm {
+	flex: 1;
+	border: 0;
+	display: block;
+	height: inherit;
+	width: inherit;
+	transition: .6s;
+}
+
+.portfolio-img-sm:hover {
+	transform: translateY(25%);
+}
+
+
+.portfolio-text-outer {
+	flex: 1;
+	height: 25%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+.portfolio-text {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.portfolio-img-sm-1 {
+	background:url(http://www.ontopvisibility.com/wp-content/uploads/3kilos.png) no-repeat;
+}
+
+.portfolio-img-sm-2 {
+	background:url(http://www.ontopvisibility.com/wp-content/uploads/worldwidecapture.png) no-repeat;
 }
 
 .portfolio-lg {
-flex: 2;
+	flex: 2;
+	padding: 16px;
+	width: 400px;
+	height: 400px;
+	margin: 24px 8px;
+}
+
+.portfolio-img-lg {
+/*	
+	border: 0;
+	display: block;
+	height: auto;
+	width: auto;
+*/}
+
+.portfolio-img-lg-1 {
+background:url(http://www.ontopvisibility.com/wp-content/uploads/Fresh.png) no-repeat;
+border: 1px black solid;
+}
+
+
+.portfolio-text-lg {
+	
+}
+
+.portfolio-img-lg-1 {
+
+}
+
+.panel {
+	margin: 0;
+	top: 0;
+	left: 0;
+	margin-left: 250px;
+	position: relative;
+}
+
+.contact-panel {
+	margin: 0;
+	top: 0;
+	left: 0;
+	height: auto;
+	margin-left: 290px;
+}
+
+.contact-panel-inner {
+	width: auto;
+	height: auto;
+	padding: 16px;
+	display: flex;
+	flex-direction: row;
+}
+
+.contact-me {
+	flex: 1.3;
+	padding: 8px;
+	height: 80%;
+	width:auto;
+}
+
+.testimonials-outer {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.testimonials-inner {
+	padding: 48px;
+	text-align:center;
+}
+
+.testimonials-carousel {
+	font-size: 32px;
+	font-family: canada-type-gibson;
+}
+
+.testimonials-text {
+
+}
+
+.testimonials-author {
+	font-weight: bold;
+	margin-top: 16px;
+}
+
+.red {
+    color:red;
+}
+
+.form-area {
+
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px 20px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-group {
+	margin-bottom: 16px;
+}
+
+.form-btn {
+	color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.btn-primary:hover {
+
+    color: #fff;
+    background-color: #3071a9;
+    border-color: #285e8e;
+}
+
+
+.pull-right {
+	float: right;
 }
