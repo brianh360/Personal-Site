@@ -505,13 +505,11 @@ padding: 48px 0;
 	border: 0;
 	margin: 0;
 	max-width: 80%;
-	transition: .3s;
-    transform: rotateY(16deg);
+
 }
 
 .services-img:hover {
-	perspective: 10px;
-	transform: rotateY(0deg);
+
 }
 .service-inner-text {
 margin-bottom: 12px;
@@ -630,6 +628,13 @@ font-size: 38px;
 	height: 100%;
 	width: 100%;
 	flex: 2;
+
+}
+
+.testimonial-level {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
 
