@@ -32,7 +32,7 @@ function currentTime () {
 	let timePrint = `${hours}:${minutes < 10 ? 0 : '' }${minutes}`;
 
 	let atDesk = false;
-	if (hours > 9 && isAM)
+	if (hours > 9 && isAm)
 	{
 		atDesk = true;
 	}
@@ -44,13 +44,15 @@ function currentTime () {
 
 	if (isAm && atDesk)
 	{
-		console.log(timePrint + 'am' + 'I am at my desk !');
+		amHere.innerHTML = `${timePrefix} ${timePrint}am here — I am at my desk !`;
+		amHere.style.color = '#5c7079';
+		amHere.style.fontWeight = 'bold';
 	}
 
 	else if (isPm && atDesk)
 	{
 		// console.log(timePrefix + timePrint + 'pm' + ' here — I am at my desk !');
-		amHere.innerHTML = `${timePrefix} ${timePrint} pm here — I am at my desk !`;
+		amHere.innerHTML = `${timePrefix} ${timePrint}pm here — I am at my desk !`;
 		amHere.style.color = '#5c7079';
 		amHere.style.fontWeight = 'bold';
 	}
@@ -103,3 +105,29 @@ ID = setInterval(currentTime, 60000);
 
 currentTime();
 clockBounce();
+
+
+/* Slider for the images on the homepage
+
+** when the user is at eye level of the slider, make it swap between two or three photos. 
+Slide one photo out, then slide another in, when the user scrolls away from the eye level view, stop the slider
+
+*/
+
+
+function dropModalIn () {
+	let bannerPanel = document.querySelector('.banner-panel');
+	let modal = document.querySelector('.button-dropdown-outer');
+	let x = window.scrollY + window.innerHeight;
+	let bannerTop = bannerPanel.offsetTop;
+
+	if (x >= bannerTop)
+	{
+		modal.classList.add('active');
+	} else {
+		modal.classList.remove('active');
+
+	}
+}
+
+window.addEventListener('scroll', dropModalIn);
