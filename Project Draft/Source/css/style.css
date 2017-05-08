@@ -966,6 +966,7 @@ padding: 48px 0;
 }
 
 .button-dropdown-outer {
+	position: relative;
 	flex: .3;
 	display: flex;
 	flex-direction: column;
@@ -1130,3 +1131,64 @@ width: 50%;
 	margin: 0 0 0 8px;
 	font-size: 10px;
 }
+
+.active {
+position: relative;
+animation: fade 5s, moveout 5s;
+-webkit-animation: fade 5s, moveout 5s; 
+
+}
+
+@keyframes moveout 
+{
+
+	 from {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  to {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+ }
+
+ @keyframes fade 
+{
+
+	 from {
+    -webkit-opacity:0;
+    -moz-opacity:0;
+    -ms-opacity:0;
+    opacity:0;
+  }
+
+  to {
+    -webkit-opacity:1;
+    -moz-opacity:1;
+    -ms-opacity:1;
+    opacity:1;
+  }
+ }
+
+/*
+@keyframes moveout
+{
+	0% {opacity:0}
+	40% {opacity:.6}
+	80% {opacity:1}
+	100% {opacity:0}
+}*/
+
+/*
+@-webkit-keyframes moveout 
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}*/
