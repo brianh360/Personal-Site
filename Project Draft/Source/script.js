@@ -32,7 +32,7 @@ function currentTime () {
 	let timePrint = `${hours}:${minutes < 10 ? 0 : '' }${minutes}`;
 
 	let atDesk = false;
-	if (hours > 9 && isAm)
+	if (hours >= 9 && isAm)
 	{
 		atDesk = true;
 	}
@@ -114,6 +114,20 @@ Slide one photo out, then slide another in, when the user scrolls away from the 
 
 */
 
+function debounce(func, wait = 20, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
 
 function dropModalIn () {
 	let bannerPanel = document.querySelector('.banner-panel');
@@ -130,4 +144,72 @@ function dropModalIn () {
 	}
 }
 
-window.addEventListener('scroll', dropModalIn);
+window.addEventListener('scroll', debounce(dropModalIn));
+
+let formText = document.querySelector('.help-block');
+let formMessage = document.querySelector('form textarea');
+let button = document.querySelector('#submit');
+
+function charsLeft (e) {
+
+let charArray = this.value.length;
+
+	if (charArray >= 140)
+	{
+		formText.innerHTML = '<br />' + 'You have reached the limit of characters: 140';
+		formText.classList.add('red');
+			button.style.display = 'none';
+			return;
+	}
+
+	if (charArray < 141)
+	{
+		formText.innerHTML = '<br />' + `You have ${Math.abs(charArray - 140)} characters left`;
+		formText.classList.remove('red');
+		button.style.display = 'block';
+	}
+}
+
+formMessage.addEventListener('keydown', charsLeft);
+
+let beenRandomized = false;
+
+function bubbleMove () {
+
+	if (beenRandomized)return;
+let panel = document.querySelector('.contact-panel');
+let panelObjects = document.querySelectorAll('.testimonial');
+let panelBoundaries = panel.getBoundingClientRect();
+let height = panelBoundaries.height;
+let width = panelBoundaries.width;
+
+let topDown = window.scrollY + window.innerHeight;
+let panelTop = panel.offsetTop;
+
+
+	if (topDown >= panelTop)
+	{
+		console.log('Ready to start the movements!');
+		panelObjects.forEach(function (test) {
+
+				randomize(test);
+		});
+		beenRandomized = true;
+	}
+}
+
+function randomize (testimonial) {
+
+	let randNum  = Math.floor(Math.random() * 20);
+
+	if (randNum > 6)
+	{
+		testimonial.classList.add('test-active1');
+	} else if (randNum > 8 && randNum <= 14) {
+		testimonial.classList.add('test-active3');
+	} else {
+		testimonial.classList.add('test-active2');
+	}
+}
+
+window.addEventListener('scroll', debounce(bubbleMove));
