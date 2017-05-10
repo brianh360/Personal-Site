@@ -15,6 +15,7 @@ body {
 footer {
 	background-color: #f9f9f9;
 	padding: 32px 0;
+	position: relative;
 }
 
 a {
@@ -111,6 +112,7 @@ color: #747474;
 }
 
 .button {
+	font-family: lora;
     padding: 12px 24px;
     font-size: 16px;
     border-radius: 4px;
@@ -1028,6 +1030,7 @@ font-family: Poppins;
 .banner-panel {
 	background: url(http://tutsplus.github.io/bootstrap-tour-tutorial/img/banner-bg.jpg) no-repeat center
 	center;
+	    z-index: 10000;
 }
 
 .banner-content {
@@ -1307,7 +1310,6 @@ animation: fade 5s, moveout 5s;
 }
 .navbar-custom .navbar-brand {
   color: #fed136;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -1321,8 +1323,8 @@ animation: fade 5s, moveout 5s;
 .navbar-custom .navbar-toggle {
   background-color: #fed136;
   border-color: #fed136;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+/*  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+*/  text-transform: uppercase;
   color: white;
   font-size: 12px;
 }
@@ -1331,8 +1333,8 @@ animation: fade 5s, moveout 5s;
   background-color: #fed136;
 }
 .navbar-custom .nav li a {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+/*  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+*/  text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
@@ -1895,6 +1897,7 @@ animation: fade 5s, moveout 5s;
     float: left !important;
   }
   .navbar-right {
+  	font-family: sans-serif;
     float: right !important;
     margin-right: -15px;
   }
@@ -1907,7 +1910,19 @@ animation: fade 5s, moveout 5s;
   background-color: transparent;
   border-color: transparent;
 }
+
+.btn-xl {
+	color: #fff;
+    border-radius: 3px;
+    font-size: 24px;
+    padding: 20px 40px;
+}
 .navbar-default .navbar-brand {
+	background: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    height: 21px;
+    width: 89px;
   color: #777;
 }
 .navbar-default .navbar-brand:hover,
@@ -1919,11 +1934,14 @@ animation: fade 5s, moveout 5s;
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:active {
+  color: rgb(255, 193, 7);
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: rgb(255, 193, 7);
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -2104,11 +2122,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 
 .nav-container {
+
 	margin: 0 48px;
 }
-
-
-
 
 header {
   background-image: url('https://blackrockdigital.github.io/startbootstrap-agency//img/header-bg.jpg');
@@ -2127,14 +2143,15 @@ header .intro-text {
   padding-bottom: 50px;
 }
 header .intro-text .intro-lead-in {
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: sans-serif;
+/*  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   text-transform: uppercase;
   font-weight: 700;
   font-size: 50px;
@@ -2143,19 +2160,19 @@ header .intro-text .intro-heading {
 }
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 250px;
+    padding-bottom: 138px;
   }
   header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     font-style: italic;
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
+/*    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+*/    text-transform: uppercase;
     font-weight: 700;
     font-size: 75px;
     line-height: 75px;
@@ -2163,40 +2180,120 @@ header .intro-text .intro-heading {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-/*#main-nav {
-	height: 50px;
-	width: 100%;
-	padding: 25px 0;
-    margin-bottom: 25px;
-}
-
-.nav-container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 80%;
-}
-
-.inner-nav {
+.services-welcome-info-panel {
+width: 100%;
 
 }
 
-.navbar-brand {
-	font-size: 2em;
+.services-welcome-info-content {
+width: 100%;
+
 }
 
-.inner-nav ul {
+.services-welcome-info-container .services-text-column{
 	display: flex;
-	float: right;
-}*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 64px 180px;
+}
+
+.text-column .hdr-lg .hdr-text {
+	text-align: center;
+}
+
+.services-text-column .sub-text {
+text-align: center;
+margin-bottom: 64px;
+}
+
+.services-text-column .hdr-lg {
+text-align: center;
+}
+.services-text-column .hdr-text {
+text-align: center;
+}
+.services-text-column h1 {
+font-size: 64px;
+}
+.services-text-column h2 {
+font-size: 28px;
+}
+.services-text-column .text-seperator {
+    margin: 24px 0 68px 0;
+    border: .8px solid rgba(128, 128, 128, 0.29);
+    width: 20%;
+}
+
+.web-design-panel {
+    width: auto;
+    height: 600px;
+}
+
+.web-design-inner {
+
+    width: auto;
+    height: 600px;
+}
+
+.web-design-panel-left-half {
+    height: 600px;
+    width: 50%;
+    float: left !important;
+    background: #742a03;
+}
+
+.web-design-panel-left-half-inner {
+	padding: 48px 48px;
+	background-color: transparent;
+
+}
+
+.web-design-panel-right-half {
+	height: 600px;
+	width: 50%;
+	float: right !important;
+}
+
+.web-design-panel-right-half-inner {
+	height: 100%;
+background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc41e7-1482-47cb-b66d-1258186bc95a/digital-consulting-services-research.jpg);
+
+}
+.web-design-panel-left-half-inner-content {
+
+}
+
+.header-caption {
+
+}
+
+.left-half-intro h1 {
+	font-size: 48px;
+	color: #fff;
+}
+
+.left-half-intro p {
+	color: #fff;
+}
+
+.left-half-intro {
+    margin-bottom: 48px;
+}
+.left-half-text .sub-text {
+	color: #fff;
+	margin-bottom: 48px;
+    margin-top: 24px;
+}
+
+.left-half-text .button {
+    background: #fff;
+    border-color: #fff;
+    color: #742a03;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 64px;
+    padding-left: 64px;
+    border-radius: 20px;
+}
