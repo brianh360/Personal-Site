@@ -2300,6 +2300,7 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 }
 
 .web-development-panel {
+	margin: 48px 0;
     width: auto;
     height: 600px;
 }
