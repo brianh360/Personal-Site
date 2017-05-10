@@ -2232,25 +2232,24 @@ font-size: 28px;
 }
 
 .web-design-inner {
-
     width: auto;
     height: 600px;
 }
 
-.web-design-panel-left-half {
+.panel-color-half {
     height: 600px;
     width: 50%;
     float: left !important;
     background: #742a03;
 }
 
+
 .web-design-panel-left-half-inner {
 	padding: 48px 48px;
 	background-color: transparent;
-
 }
 
-.web-design-panel-right-half {
+.panel-image-half {
 	height: 600px;
 	width: 50%;
 	float: right !important;
@@ -2272,10 +2271,12 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 .left-half-intro h1 {
 	font-size: 48px;
 	color: #fff;
+	text-transform: capitalize;
 }
 
 .left-half-intro p {
 	color: #fff;
+	text-transform: capitalize;
 }
 
 .left-half-intro {
@@ -2296,4 +2297,58 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
     padding-right: 64px;
     padding-left: 64px;
     border-radius: 20px;
+}
+
+.web-development-panel {
+    width: auto;
+    height: 600px;
+}
+
+.web-development-inner {
+    width: auto;
+    height: 600px;
+}
+
+.web-development-inner .panel-image-half {
+	height: 600px;
+	width: 50%;
+	float: left !important;
+}
+
+.web-development-inner .panel-color-half {
+	height: 600px;
+	width: 50%;
+	float: right !important;
+}
+
+.panel-right-half .web-development-panel-right-half-inner {
+	/*background-color: red;*/
+}
+
+.web-development-panel-right-half-inner {
+	padding: 48px 48px;
+	background-color: transparent;
+}
+.web-development-panel-left-half-inner-content {
+	background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/eb/79/eb79e6c2-788f-483b-add1-4bdd6fbd18c7/digital-solutions-consulting-services-websites.jpg);
+    height: 600px;
+}
+
+.left-half-text .button {
+    background: #fff;
+    border-color: #fff;
+    color: #742a03;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 64px;
+    padding-left: 64px;
+    border-radius: 20px;
+}
+
+.web-development-inner .panel-color-half .button {
+    color: #438392;
+}
+
+.web-development-inner .panel-color-half {
+	background: #438392;
 }
