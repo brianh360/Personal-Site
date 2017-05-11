@@ -6,6 +6,26 @@ It's 9:49am here — I'm at my desk !
 Lets users to the website know whether I am currently in office hours, mon - fri 9 - 5pm sat - sun 12pm - 4pm
 if am at desk at that time, display the phone number, let the user know the current time at my desk, let the user know whether I'm at my desk or not
 */
+
+function debounce(func, wait = 20, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+let theIndex = document.querySelector('#index');
+let theServices = document.querySelector('#services');
+if (theIndex) {
+
 let ID;
 
 function currentTime () {
@@ -114,20 +134,7 @@ Slide one photo out, then slide another in, when the user scrolls away from the 
 
 */
 
-function debounce(func, wait = 20, immediate = true) {
-      var timeout;
-      return function() {
-        var context = this, args = arguments;
-        var later = function() {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-    };
+// drops down the advertisment into the footer, debounced so the scroll doesnt go crazy on the bandwith bruh. 
 
 function dropModalIn () {
 	let bannerPanel = document.querySelector('.banner-panel');
@@ -151,7 +158,6 @@ let formMessage = document.querySelector('form textarea');
 let button = document.querySelector('#submit');
 
 function charsLeft (e) {
-
 let charArray = this.value.length;
 
 	if (charArray >= 140)
@@ -169,6 +175,7 @@ let charArray = this.value.length;
 		button.style.display = 'block';
 	}
 }
+
 
 formMessage.addEventListener('keydown', charsLeft);
 
@@ -213,3 +220,26 @@ function randomize (testimonial) {
 }
 
 window.addEventListener('scroll', debounce(bubbleMove));
+
+}
+
+// Fixes the nav bar after a certain distance, 
+if (theServices) {
+	let nav = document.querySelector('.navbar-default');
+
+function navScroll () {
+	let y = window.scrollY;
+
+	if (y >= 150)
+	{
+		nav.classList.add('nav-active');
+	} 
+
+	else if (y <= 150) {
+		nav.classList.remove('nav-active');
+	}
+}
+
+}
+
+window.addEventListener('scroll', navScroll);
