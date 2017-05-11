@@ -124,6 +124,7 @@ color: #747474;
     color: #fff;
     cursor: pointer;
     transition: .3s;
+    text-transform: capitalize;
 }
 
 .button:hover {
@@ -1304,6 +1305,12 @@ animation: fade 5s, moveout 5s;
  }
 
 /*Services Page css*/
+.nav-active {
+	background: #222 !important;
+	position: fixed !important;
+	padding: 16px !important;
+}
+
 .navbar-custom {
   background-color: #222222;
   border-color: transparent;
@@ -2288,7 +2295,7 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
     margin-top: 24px;
 }
 
-.left-half-text .button {
+.web-design-panel .left-half-text .button {
     background: #fff;
     border-color: #fff;
     color: #742a03;
@@ -2331,11 +2338,11 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 	background-color: transparent;
 }
 .web-development-panel-left-half-inner-content {
-	background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/eb/79/eb79e6c2-788f-483b-add1-4bdd6fbd18c7/digital-solutions-consulting-services-websites.jpg);
+	background-image: url(emile-perron-1902211.jpg);
     height: 600px;
 }
 
-.left-half-text .button {
+.web-development-panel .left-half-text .button {
     background: #fff;
     border-color: #fff;
     color: #742a03;
@@ -2352,4 +2359,95 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 
 .web-development-inner .panel-color-half {
 	background: #438392;
+}
+
+.wordpress-help-panel {
+    width: auto;
+    height: 600px;
+}
+.wordpress-help-inner {
+    width: auto;
+    height: 600px;
+}
+
+.wordpress-help-inner .panel-color-half {
+	background: #ff6e00;
+}
+.wordpress-help-panel-left-half-inner {
+	padding: 48px 48px;
+	background-color: transparent;
+}
+.wordpress-help-panel-right-half-inner {
+	background-image: url(william-iven-5895.jpg);
+    height: 600px;
+}
+
+.wordpress-help-panel .left-half-text .button {
+    background: #fff;
+    border-color: #fff;
+    color: #ff6e00;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 64px;
+    padding-left: 64px;
+    border-radius: 20px;
+}
+
+.other-stuff-panel {
+	margin: 48px 0;
+    width: auto;
+    height: 600px;
+}
+.other-stuff-inner {
+    width: auto;
+    height: 600px;
+}
+
+.other-stuff-panel-right-half-inner {
+	padding: 48px 48px;
+	background-color: transparent;
+}
+.other-stuff-inner .panel-image-half {
+	height: 600px;
+	width: 50%;
+	float: left !important;
+}
+
+.other-stuff-inner .panel-color-half {
+	height: 600px;
+	width: 50%;
+	float: right !important;
+	background: #ad7669;
+}
+
+.other-stuff-panel-left-half-inner {
+	background-image: url(joanna-kosinska-129039.jpg);
+    height: 600px;
+}
+
+
+.other-stuff-panel .left-half-text .button {
+    background: #fff;
+    border-color: #fff;
+    color: #ad7669;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 64px;
+    padding-left: 64px;
+    border-radius: 20px;
+}
+
+.services-btn:hover {
+	background-color: transparent !important;
+    color: #fff !important;
+}
+
+.about-us-personal-image {
+	background: url(ayo-ogunseinde-93181.jpg);
+	height: 600px;
+	width: 1000px;
+}
+
+.experience-info-panel {
+	
 }
