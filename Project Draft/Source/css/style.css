@@ -2449,5 +2449,95 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 }
 
 .experience-info-panel {
-	
+/*	margin: 48px 48px;*/
+    width: auto;
+    height: 600px;
+    background:#f3efe0;
+
+}
+
+.experience-info-panel-inner {
+	height: 100%;
+	width: 100%;
+
+}
+
+.experience-info-panel-left {
+	float: left;
+    height: 100%;
+    width: 40%;
+}
+
+.experience-info-panel-left-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.experience-info-panel-right {
+	float: right;
+    height: 100%;
+    width: 60%;
+}
+
+.experience-info-panel-right-inner {
+	height: 100%;
+	width: 100%;	
+}
+
+.resume-list {
+	padding: 0 16px;
+	height: 100%;
+	width: 100%;
+}
+
+.resume-bg {
+	text-align: center;
+	color: #333;
+	letter-spacing: 1px;
+}
+.resume-list-inner .hdr-text {
+    margin-bottom: 16px;
+}
+.resume-list-inner .sub-text {
+	text-align:center;
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.resume-list-inner .text-seperator {
+	width: 100%;
+	margin: 32px 0 4px 0;
+}
+
+.resume-education-portion {
+
+}
+
+.small-pt {
+	margin: 0;
+    font-size: 14px;
+    font-weight: bolder;
+    color: black;
+}
+
+.resume-block {
+	height: 100%;
+	width: 100%;
+}
+
+.resume-block-left {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.resume-block-right {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+.resume-year {
+	color: #222;
+
 }
