@@ -24,6 +24,8 @@ function debounce(func, wait = 20, immediate = true) {
 
 let theIndex = document.querySelector('#index');
 let theServices = document.querySelector('#services');
+let theAbout = document.querySelector('#about');
+let theContact = document.querySelector('#contact');
 if (theIndex) {
 
 let ID;
@@ -224,7 +226,7 @@ window.addEventListener('scroll', debounce(bubbleMove));
 }
 
 // Fixes the nav bar after a certain distance, 
-if (theServices) {
+if (theServices || theAbout || theContact) {
 	let nav = document.querySelector('.navbar-default');
 
 function navScroll () {
@@ -243,3 +245,5 @@ function navScroll () {
 }
 
 window.addEventListener('scroll', navScroll);
+
+
