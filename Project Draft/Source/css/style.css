@@ -2642,6 +2642,7 @@ text-align: center;
 .portfolio-page-panel-outer{
 width: 100%;
 height: 100%;
+background-color: #777;
 }
 .portfolio-page-panel-inner {
 display: flex;
@@ -2657,6 +2658,8 @@ flex-direction: column;
     border-bottom: 1px black solid;
     border-radius: 14px;
     padding: 48px 0;
+    margin-top: 48px;
+    margin-bottom: 48px;
 }
 .portfolio-page-panel-left {
 	flex: 1;
