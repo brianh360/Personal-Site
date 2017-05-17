@@ -76,6 +76,12 @@ span {
 color: #747474;
 }
 
+legend {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
 .small {
 	font-size:12px;
 	font-weight: 400;
@@ -680,9 +686,9 @@ font-size: 38px;
 
 .contact-me {
 	flex: 1.3;
-	padding: 8px 64px;
 	height: 80%;
 	width:auto;
+	margin-right: 24px;
 }
 
 .red {
@@ -966,21 +972,88 @@ font-family: Poppins;
 .red {
     color:red;
 }
+.form-2 .text-seperator {
+	margin: 64px 0;
+}
+.form-2 .form-group {
+	margin: 0 110px 0 0;
+}
 
+.form-active {
+	display: block !important;
+}
+.form-1 {
+	display: none;
+}
+.form-2 {
+	display: none;
+}
+.form-row label {
+position: relative;
+}
+.form-row label input {
+display: none;
+}
+
+.form-row label span {
+	color: #333;
+}
+.form-row label:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: solid #fff;
+    /* border-width: 0 2px 2px 0; */
+    transform: rotate(deg);
+    left: 72.5%;
+    bottom: 20.8%;
+    border-radius: 100%;
+}
+.form-row label:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    left: 67%;
+    bottom: 51%;
+    left: 77.5%;
+    bottom: 41.8%;
+}
+.form-row-inner label {
+	background: #ebebeb;
+    border-radius: 0.3rem;
+    padding: 24px 64px;
+    font-size: 1.4rem;
+    color: #32383b;
+    cursor: pointer;
+    -webkit-transition: background 200ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
+    transition: background 200ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
+}
 .form-area {
-
     background-color: #FAFAFA;
-	padding: 10px 40px 60px 20px;
-	margin: 10px 0px 60px;
-	border: 1px solid GREY;
+    padding: 10px 20px 60px 20px;
+    margin: 10px 0px 60px;
+    border: 1px solid GREY;
+}
+.form-header {
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: 700;
 }
 
 .form-control {
-    display: block;
+display: block;
     width: 100%;
     height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: 24px 48px;
+    font-size: 16px;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;
@@ -995,7 +1068,17 @@ font-family: Poppins;
 }
 
 .form-group {
-	margin-bottom: 16px;
+margin: 24px 110px 16px 0;
+
+}
+.form-row {
+	display: flex;
+}
+.form-row-inner {
+	display: flex;
+	flex-direction: column;
+	margin-right: 48px;
+	flex: 1;
 }
 
 .form-btn {
@@ -1040,20 +1123,45 @@ font-family: Poppins;
 
 
 .pull-right {
-	float: right;
+	position: absolute;
+    bottom: 64px;
+    left: 64.3%;
+    /* text-align: center; */
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    font-size: 18px;
+    z-index: 9999;
+    font-weight: 700;
+    transition: 1s;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: -webkit-transform 400ms cubic-bezier(0.63, 0.64, 0.3, 1);
+    transition: transform 400ms cubic-bezier(0.63, 0.64, 0.3, 1);
+    text-indent: -5px;
+    background-color: #438392;
+    border-color: #438392;
+}
+
+.pull-right:hover {
+	transform: rotate(60deg) scale(1.1, 1.1);
+	color: #fff;
+	background-color: #438392;
+    border-color: #438392;
 }
 
 .banner-panel {
 	background: url(http://tutsplus.github.io/bootstrap-tour-tutorial/img/banner-bg.jpg) no-repeat center
 	center;
-	    z-index: 10000;
+	z-index: 10000;
 }
 
 .banner-content {
-flex: 3;
-display: flex;
-flex-direction: row;
-padding: 48px 0;
+	flex: 3;
+	display: flex;
+	flex-direction: row;
+	padding: 48px 0;
 }
 
 .banner-container {
@@ -2240,6 +2348,9 @@ width: 100%;
 width: 100%;
 
 }
+.services-welcome-info-sub {
+	width: 80%;
+}
 
 .services-welcome-info-container .services-text-column{
 	display: flex;
@@ -2490,6 +2601,7 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 	background: url(ayo-ogunseinde-93181.jpg);
 	height: 600px;
 	width: 1000px;
+	margin-bottom: 64px;
 }
 
 .experience-info-panel {
@@ -2559,10 +2671,11 @@ margin:0 0 16px 0;
 }
 
 .resume-bold-header h2 {
-	font-size: 8px;
+	font-size: 12px;
     font-weight: bold;
     margin: 0px;
     color: #222;
+    margin-top: 4px;
 }
 
 .futher-info-panel {
@@ -2570,8 +2683,12 @@ margin:0 0 16px 0;
 	flex-direction: row;
 	padding: 24px 24px;
 }
+
+.right-side-header-bold p {
+/*	margin: 0;*/
+}
 .resume-left-side-content {
-	flex:3;
+	flex:2;
 /*    padding-right: 16%;*/
 }
 .left-side-header-bold {
@@ -2590,7 +2707,7 @@ margin:0 0 16px 0;
 
 }
 .resume-right-side-content {
-
+	flex:1;
 }
 .right-side-header-bold {
 
@@ -2794,7 +2911,7 @@ height: 150px;
 }
 
 .contact-page-panel-right {
-	flex: 1;
+	flex: 2;
 	display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2815,8 +2932,7 @@ height: 150px;
     border-radius: 60px;
     background: url(joanna-kosinska-129039.jpg);
     margin-bottom:64px;
-/*        background-position: -330px -36px;
-*/}
+}
 
 .contact-page-panel-left-content {
 
@@ -2826,6 +2942,49 @@ height: 150px;
 
 .contact-page-panel-right-inner {
 	    padding: 64px 0;
+}
+
+.toggle-links {
+	background: #438392;
+	display: flex;
+	text-align: center;
+    max-width: 62rem;
+    border-radius: 3.5rem;
+    zoom: 1;
+    width: calc(100% - 40px);
+    text-align: center;
+    border: 0.1rem solid #438392;
+    border-radius: 2rem;
+    overflow: hidden;
+    z-index: 2;
+}
+.toggle-links a {
+	flex: 1;
+    padding: 2.5rem 1rem;
+    background: #fff;
+    padding: 1.5rem 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #438392;
+}
+
+.start-project {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background: #438392;
+}
+.get-in-touch {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background: #438392;
+}
+
+.contact-active {
+	background: #438392 !important;
+	color: #fff !important;
 }
 
 .contact-social-icons {
@@ -2891,4 +3050,26 @@ font-size: 32px;
     flex-direction: column;
     align-items: flex-end;
     margin-top: 24px;
+}
+
+.typed-cursor{
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
