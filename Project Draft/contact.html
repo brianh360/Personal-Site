@@ -99,34 +99,142 @@
             <div class="contact-page-panel-right">
                 <div class="contact-page-panel-right-inner">
                     <div class="contact-page-panel-right-content">
+                           <nav class="toggle-links">
+                               <a href="#get-in-touch" class="get-in-touch">Get in Touch</a>
+                               <a href="#start-project" class="start-project">Start your Project</a>
+                           </nav>`
                         <div class="contact-page-panel-right-form">
                              <div class="contact-me">
+
+                             <!-- Beginning of Form 1 -->
+        <div class="form-1">                  
           <div class="col-md-5">
     <div class="form-area">  
         <form role="form">
-        <br style="clear:both">
-                    <h3 style="margin-bottom: 25px;text-align: center;font-size: 32px;font-weight: 700;">Get in touch!</h3>
-            <div class="form-group">
-            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-          </div>
+
+                    <h3 class="form-header">Get in Touch!</h3>
+            <div class="form-row">
+
+                <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="What's your name?" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Where can I email you?" required>
+              </div>
+
+            </div>
                     <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                        <span class="help-block"><p id="characterLeft" class="help-block ">What's on your mind?</p></span>                    
+                    <textarea class="form-control" type="textarea" id="message" placeholder="What's on your mind?" maxlength="140" rows="7"></textarea>
+                        <span class="help-block"><p id="characterLeft" class="help-block ">Leave me a message!</p></span>                    
                     </div>
+
             
         <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
         </form>
     </div>
 </div>
+</div>
+<!-- End of Form 1 -->
+
+<!-- Beginning of Form 2 -->
+<div class="form-2">                  
+          <div class="col-md-5">
+    <div class="form-area">  
+        <form role="form">
+
+                    <h3 class="form-header">Get Started on Your Next Project!</h3>
+
+                    <!-- Form Row Start -->
+            <div class="form-row"> 
+
+                <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="What's your name?" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="What's the name of your business?" required>
+              </div>
+
+            </div>
+
+            <!-- Form Row End -->
+
+            <!-- Form Row Start -->
+            <div class="form-row"> 
+
+                <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="What's your email address?" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="What's your phone number?" required>
+              </div>
+
+            </div>
+                        <div class="text-seperator resume-seperator" ></div>
+            <!-- Form Row End -->
+
+             <!-- Form Row Start -->
+            <div class="form-row">
+                <legend>What Can I Help You With?</legend>
+                <div class="form-row-inner">
+
+                        <label>
+                            <input type="checkbox" value="Web Design">
+                            <span>Web Design</span>
+                        </label>
+                </div>
+
+                <div class="form-row-inner">
+                        <label>
+                            <input type="checkbox" value="Web Design">
+                            <span>Web Design</span>
+                        </label>
+                </div>
+
+
+            </div>
+            <div class="text-seperator resume-seperator" ></div>
+            <!-- Form Row End -->
+
+             <!-- Form Row Start -->
+            <div class="form-row"> 
+
+                <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="What's your name?" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Where can I email you?" required>
+              </div>
+
+            </div>
+            <!-- Form Row End -->
+
+             <!-- Form Row Start -->
+            <div class="form-row"> 
+
+                <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="What's your name?" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Where can I email you?" required>
+              </div>
+
+            </div>
+            <div class="text-seperator resume-seperator" ></div>
+            <!-- Form Row End -->
+
+                    <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="What's on your mind?" maxlength="140" rows="7"></textarea>
+                        <span class="help-block"><p id="characterLeft" class="help-block ">What's on your mind?</p></span>                    
+                    </div>
+
+            
+        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+        </form>
+    </div>
+</div>
+</div>
+<!-- End of Form 2 -->
+
 </div>
                         </div>
                     </div>
@@ -165,13 +273,12 @@
     <script>
     document.addEventListener("DOMContentLoaded", function(){
         Typed.new(".element", {
-            strings: ["It's Nice To Meet You", ""],
+            strings: ["Get your next project started", ""],
             typeSpeed: 50,
             loop: true,
             showCursor: false,
             backSpeed: 100,
-            backDelay: 500,
-            startDelay: 1000
+            backDelay: 5000
         });
     });
 </script>
