@@ -155,31 +155,6 @@ function dropModalIn () {
 
 window.addEventListener('scroll', debounce(dropModalIn));
 
-let formText = document.querySelector('.help-block');
-let formMessage = document.querySelector('form textarea');
-let button = document.querySelector('#submit');
-
-function charsLeft (e) {
-let charArray = this.value.length;
-
-	if (charArray >= 140)
-	{
-		formText.innerHTML = '<br />' + 'You have reached the limit of characters: 140';
-		formText.classList.add('red');
-			button.style.display = 'none';
-			return;
-	}
-
-	if (charArray < 141)
-	{
-		formText.innerHTML = '<br />' + `You have ${Math.abs(charArray - 140)} characters left`;
-		formText.classList.remove('red');
-		button.style.display = 'block';
-	}
-}
-
-
-formMessage.addEventListener('keydown', charsLeft);
 
 let beenRandomized = false;
 
@@ -245,5 +220,62 @@ function navScroll () {
 }
 
 window.addEventListener('scroll', navScroll);
+
+if (theContact) {
+
+	let formText = document.querySelector('.help-block');
+let formMessage = document.querySelector('form textarea');
+let button = document.querySelector('#submit');
+
+function charsLeft (e) {
+let charArray = this.value.length;
+
+	if (charArray >= 140)
+	{
+		formText.innerHTML = '<br />' + 'You have reached the limit of characters: 140';
+		formText.classList.add('red');
+			button.style.display = 'none';
+			return;
+	}
+
+	if (charArray < 141)
+	{
+		formText.innerHTML = '<br />' + `You have ${Math.abs(charArray - 140)} characters left`;
+		formText.classList.remove('red');
+		button.style.display = 'block';
+	}
+}
+
+
+formMessage.addEventListener('keydown', charsLeft);
+	
+	let contactNav = Array.from(document.querySelectorAll('.toggle-links a'));
+	let form1 = document.querySelector('.form-1');
+	let form2 = document.querySelector('.form-2');
+
+		form1.classList.add('form-active');
+		contactNav[0].classList.add('contact-active');
+
+		function contactFlip () {
+			contactNav[0].classList.remove('contact-active');
+			contactNav[1].classList.remove('contact-active');
+			form1.classList.remove('form-active');
+			form2.classList.remove('form-active');
+
+			this.classList.add('contact-active');
+
+			if (this == contactNav[0])
+			{
+				form1.classList.add('form-active');
+			} else {
+				form2.classList.add('form-active');
+			}
+
+	}
+
+	contactNav.forEach( function (navbutton){
+		navbutton.addEventListener('click', contactFlip);
+	});
+}
 
 
