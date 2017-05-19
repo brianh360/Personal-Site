@@ -90,6 +90,10 @@ legend {
 	font-weight:400;
 }
 
+.wht {
+	color: #fff !important;
+}
+
 .hero {
 	font-size: 64px;
 	font-family: sans-serif;
@@ -111,6 +115,7 @@ legend {
 	    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
+
 .intro-divider {
 	width: 400px;
     border-top: 1px solid #f8f8f8;
@@ -123,6 +128,10 @@ legend {
 .point {
 	color: #4672e8;
 	font-size: 52px;
+}
+
+.space {
+	height:32px;
 }
 
 .button {
@@ -1007,7 +1016,7 @@ display: none;
     border: solid #fff;
     /* border-width: 0 2px 2px 0; */
     transform: rotate(deg);
-    left: 72.5%;
+    left: 71.2%;
     bottom: 20.8%;
     border-radius: 100%;
 }
@@ -1026,14 +1035,25 @@ display: none;
     bottom: 41.8%;
 }
 .form-row-inner label {
-	background: #ebebeb;
+    background: #ebebeb;
     border-radius: 0.3rem;
-    padding: 24px 64px;
+    padding: 24px 16px;
     font-size: 1.4rem;
     color: #32383b;
     cursor: pointer;
-    -webkit-transition: background 200ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
-    transition: background 200ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
+    -webkit-transition: background 900ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
+    transition: background 900ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
+}
+
+.form-row-inner label span {
+	font-size: 18px;
+    -webkit-transition: background 900ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
+    transition: background 900ms cubic-bezier(0.63, 0.64, 0.3, 1), color 200ms linear;
+}
+
+
+.label-active {
+	background: #438392 !important;
 }
 .form-area {
     background-color: #FAFAFA;
@@ -1049,7 +1069,7 @@ display: none;
 }
 
 .form-control {
-display: block;
+	display: block;
     width: 100%;
     height: 34px;
     padding: 24px 48px;
@@ -1067,6 +1087,18 @@ display: block;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+
+.form-2 .form-control {
+	padding: 24px 16px;
+}
+
+.lg-box {
+
+    width: 104%;
+    height: 120px;
+    padding: 24px 24px;
+}
+
 .form-group {
 margin: 24px 110px 16px 0;
 
@@ -1081,6 +1113,15 @@ margin: 24px 110px 16px 0;
 	flex: 1;
 }
 
+.row{
+	display: flex;
+	flex-direction: row;
+	margin-right: 48px;
+	flex: 1;
+}
+.row input {
+	margin-right: 16px;
+}
 .form-btn {
 	color: #fff;
     background-color: #428bca;
@@ -1123,7 +1164,11 @@ margin: 24px 110px 16px 0;
 
 
 .pull-right {
-	position: absolute;
+float: right
+}
+
+.pull-right-circle {
+		position: absolute;
     bottom: 64px;
     left: 64.3%;
     /* text-align: center; */
@@ -1144,7 +1189,7 @@ margin: 24px 110px 16px 0;
     border-color: #438392;
 }
 
-.pull-right:hover {
+.pull-right-circle:hover {
 	transform: rotate(60deg) scale(1.1, 1.1);
 	color: #fff;
 	background-color: #438392;
@@ -2286,7 +2331,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 header {
-  background-image: url('https://blackrockdigital.github.io/startbootstrap-agency//img/header-bg.jpg');
+  background-image: url('ken-tomita-239357.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -2316,6 +2361,7 @@ header .intro-text .intro-heading {
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 25px;
+      text-shadow: 1px 1px black;
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -2328,6 +2374,7 @@ header .intro-text .intro-heading {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
+        text-shadow: 1px 1px black;
   }
   header .intro-text .intro-heading {
 /*    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2336,6 +2383,7 @@ header .intro-text .intro-heading {
     font-size: 75px;
     line-height: 75px;
     margin-bottom: 50px;
+        text-shadow: 1px 1px black;
   }
 }
 
