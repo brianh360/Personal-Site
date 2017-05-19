@@ -276,6 +276,24 @@ formMessage.addEventListener('keydown', charsLeft);
 	contactNav.forEach( function (navbutton){
 		navbutton.addEventListener('click', contactFlip);
 	});
+
+	let labels = Array.from(document.querySelectorAll('.form-row-inner label'));
+	let labelContent = Array.from(document.querySelectorAll('label span'));
+	
+
+	function addHighlight (e) {
+		if (e.target.matches('input'))return;
+		let spanToChange = this.querySelector('span');
+
+		this.classList.toggle('label-active');
+		spanToChange.classList.toggle('wht');
+	}
+
+	labels.forEach(function (label) {
+		label.addEventListener('click', addHighlight);
+	});
 }
+
+
 
 
