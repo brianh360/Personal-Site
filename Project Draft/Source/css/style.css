@@ -1062,7 +1062,7 @@ display: none;
     border: 1px solid GREY;
 }
 .form-header {
-	margin-bottom: 25px;
+	margin-bottom: 48px;
 	text-align: center;
 	font-size: 32px;
 	font-weight: 700;
@@ -1071,8 +1071,8 @@ display: none;
 .form-control {
 	display: block;
     width: 100%;
-    height: 34px;
-    padding: 24px 48px;
+    height: 22px;
+    padding: 24px 24px;
     font-size: 16px;
     line-height: 1.42857143;
     color: #555;
@@ -1100,7 +1100,7 @@ display: none;
 }
 
 .form-group {
-margin: 24px 110px 16px 0;
+margin: 24px 64px 16px 0;
 
 }
 .form-row {
@@ -1504,10 +1504,12 @@ display: block !important;
 	color: #fff;
 }
 .nav-active {
-	background: #222 !important;
+	background: linear-gradient(135deg,#2c2e2c 0,#202021 100%) !important;
 	position: fixed !important;
 	padding: 16px !important;
 }
+
+
 
 .navbar-custom {
   background-color: #222222;
@@ -2387,9 +2389,79 @@ header .intro-text .intro-heading {
   }
 }
 
+.inside {
+	margin: 0;
+	position: relative;
+	background: #fff;
+}
+.inside-inner {
+	padding: 48px 24px;
+}
+.service-grid {
+	display: flex;
+	flex-direction: row;
+}
+.service-grid-left {
+    padding: 0 24px;
+}
+.service-grid-left-content p {
+	line-height: 28px;
+}
+
+.service-grid-right-content p {
+	line-height: 28px;
+}
+.service-grid-right {
+	    padding: 0 24px;
+}
+
+.skillset {
+	margin-top: 30px;
+	padding: 30px 24px 0;
+	border-top: 1px #eee solid;
+
+}
+
+.skillset-title h4{
+	margin: 0;
+	font-size: 16px;
+	padding-bottom: 16px;
+	text-transform: capitalize;
+}
+.skills-listed { 
+	font-size: 14px;
+	text-decoration: none;
+	list-style-type: none;
+	display: inline-block;
+	margin-bottom: 8px;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+
+.good-skills-listed:before {
+    content: "\2713";
+    color: #61c191;
+    position: relative;
+    margin-right: 4px;
+    font-weight: bold;
+    font-size: 24px;
+} 
+
+.bad-skills-listed:before {
+    content: "x";
+    color: #df464d;
+    position: relative;
+    margin-right: 6px;
+    font-weight: bold;
+    font-size: 14px;
+} 
+
+.skills {
+	padding: 0 48px;
+}
 .services-welcome-info-panel {
 width: 100%;
-
+background: #eaeaea;
 }
 
 .services-welcome-info-content {
@@ -2406,7 +2478,7 @@ width: 100%;
     justify-content: center;
     align-items: center;
     flex: 1;
-    padding: 64px 180px;
+    padding: 64px 64px;
 }
 
 .text-column .hdr-lg .hdr-text {
@@ -2601,6 +2673,7 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 	margin: 48px 0;
     width: auto;
     height: 600px;
+    margin-bottom: 0;
 }
 .other-stuff-inner {
     width: auto;
@@ -2643,6 +2716,11 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 .services-btn:hover {
 	background-color: transparent !important;
     color: #fff !important;
+}
+
+.btn-lwr {
+	position: absolute;
+    bottom: 8px;
 }
 
 .about-us-personal-image {
@@ -2767,6 +2845,7 @@ margin:0 0 16px 0;
 }
 
 .resume-bg {
+	font-size: 48px;
 	text-align: center;
 	color: #333;
 	letter-spacing: 1px;
