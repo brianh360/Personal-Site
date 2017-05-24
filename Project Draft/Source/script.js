@@ -271,6 +271,46 @@ formMessage.addEventListener('keydown', charsLeft);
 				form2.classList.add('form-active');
 			}
 
+	let deliverables = document.querySelector('input[name="deliverables"]');
+	let checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+	let clickToggle = 0;
+	let lastClicked;
+	console.log('here');
+	console.log(checkboxes);
+	console.log(deliverables);
+
+	if (checkboxes)
+	{
+		checkboxes.forEach(function (box) {
+
+			box.addEventListener('click', sendDeliverables);
+		});
+
+		function sendDeliverables () {
+
+			if (lastClicked == this.value)
+			{
+				deliverables.value = "";
+				lastClicked = "";
+
+				checkboxes.forEach(function (boxes) {
+
+					if (boxes.checked)
+					{
+						deliverables.value = boxes.defaultValue;
+						lastClicked = deliverables.value;
+					}
+				});
+				return;
+			}
+
+			deliverables.value = this.value;
+			console.log(deliverables.value);
+
+			clickToggle++;
+			lastClicked = this.value;
+		}
+	}
 	}
 
 	contactNav.forEach( function (navbutton){
@@ -297,3 +337,26 @@ formMessage.addEventListener('keydown', charsLeft);
 
 
 
+if (theIndex || theContact) {
+	let button = document.querySelector('#submit');
+	let field1 = document.querySelector('input[name]');
+	let field2 = document.querySelector('#email');
+
+
+
+	function displayMessage () {
+		if (field1.value == "" || field2.value == "") return;
+		let placeholder = document.querySelector('.thanksmessage');
+		let newDiv = document.createElement('div');
+		let pgraph = document.createElement('p');
+
+		pgraph.innerHTML = 'Thank You!';
+		pgraph.classList.add('alert-success');
+		newDiv.appendChild(pgraph);
+		placeholder.appendChild(newDiv);
+	}
+
+
+button.addEventListener('click', displayMessage);
+
+}
