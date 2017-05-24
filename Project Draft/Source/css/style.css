@@ -31,8 +31,6 @@ a:hover {
 
 h1 {
 font-family: Montserrat;
-font-weight:;
-color: ;
     letter-spacing: 1px;
 }
 
@@ -81,6 +79,9 @@ legend {
     text-transform: uppercase;
     margin-bottom: 2rem;
 }
+
+
+
 
 .small {
 	font-size:12px;
@@ -322,7 +323,7 @@ font-family: Arial;
 .inner-about-panel {
 /*	background: rgb(160, 206, 78) url(http://www.pascalvangemert.nl/view/images/background.jpg)no-repeat;
 */	
-    background: url(https://blackrockdigital.github.io/startbootstrap-landing-page//img/intro-bg.jpg) no-repeat center center;) no-repeat center center;
+	background: url(https://blackrockdigital.github.io/startbootstrap-landing-page//img/intro-bg.jpg) no-repeat center center;) no-repeat center center;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
@@ -1039,8 +1040,6 @@ display: none;
     width: 40px;
     height: 40px;
     border: solid #fff;
-    /* border-width: 0 2px 2px 0; */
-    transform: rotate(deg);
     left: 71.9%;
     bottom: 20.8%;
     border-radius: 100%;
@@ -3231,3 +3230,463 @@ font-size: 32px;
 	100% { opacity:1; }
 }
 
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+/* -- 3 portrait tablets 768-600 -- */
+@media screen and (max-width: 767px) and (min-width: 601px) {
+	/***************** STYLES THE CONTACT.PHP PAGE **********************/
+	.navbar {
+		display: none;
+	}
+
+	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
+		position: relative !important;
+	} 
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.contact-me {
+		margin: 0;
+		padding: 0 48px;
+	}
+
+	.contact-page-panel-left {
+		display: none;
+	}
+
+	.contact-page-panel-right {
+		width: 96vw;
+	}
+
+	.toggle-links {
+		margin: 0rem auto 0 auto;
+	}
+
+	.form-1 .form-group {
+	    margin: 0;
+	    margin-right: 12px;
+	    width: 94.3%;
+	}
+
+	.form-1 .form-control {
+	    margin: 0;
+	    width: 96%;
+	    font-size: 0.7em;
+	    height: auto;
+	    padding: 1em 0 1em 1em;
+	}
+	.form-1 .text-box-size {
+    width: 100%;
+    padding: 19px 0px 0 7px;
+    padding: 1rem .5rem;
+    height: 40px;
+    font-size: 0.9em;
+	}
+
+	.form-1 .form-row {
+		padding: 0 0 1em 0;
+	}
+
+	.form-2 .form-control {
+    	width: 100%;
+    	font-size: .9em;
+    	height: inherit;
+    	padding: 1em 0 1em 1em;
+
+	}
+
+	.box-size {
+		margin-right: 12px;
+	}
+
+	.row {
+		margin: 0;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.space {
+		height: 16px;
+	}
+
+	.form-2 .text-seperator {
+	    margin: 48px 0;
+	}
+
+	.form-row-inner {
+	    margin-right: 8px;
+	}
+
+	.form-row-inner label {
+    	padding: .5em;
+	}
+
+	.form-row label:before {
+	    width: 13.2%;
+	    height: 55%;
+	}
+
+	.form-row label:after {
+    	left: 78.5%;
+	}
+
+	.form-row-inner label span {
+	    font-size: .7em;
+	}
+
+	.form-2 .form-group {
+		margin: 0;
+	    padding: 0 20px 0 0;
+		
+	}
+	/***************** STYLES THE Services.html PAGE **********************/
+	.hdr-lg h1 {
+		font-size: 48px;
+	}
+
+
+	.services-welcome-info-container .services-text-column {
+		padding: 3em .5em;
+	}
+
+	.services-welcome-info-sub {
+    	width: 100%;
+	}
+
+	.services-text-column .sub-text {
+    	font-size: 1em;
+	}
+	.service-grid {
+	    display: flex;
+	    flex-direction: row;
+	    padding: 1em;
+	    text-align: center;
+	}
+
+	.service-grid-left-content p {
+    	line-height: 2em;
+	}
+
+	.service-grid-right-content p {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE About.html PAGE **********************/
+	.experience-info-panel-inner {
+    	padding: 1em 1em;
+	}
+
+	.right-side-header-bold p {
+    	line-height: 1.6em;
+	}
+
+	.right-side-header-bold h2 {
+    	padding-bottom: 1em !important;
+	}
+
+	.services-text-column .sub-text {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE index.php PAGE **********************/
+
+	.about-panel-top-inner-left {
+    	left: 1em;
+	}
+
+	.about-panel-top-inner-right {
+    	right: 1em;
+	}
+
+	.services-img-bg {
+		display: none;
+	}
+
+	.text-column {
+		text-align: center;
+		padding: 1em;
+	}
+
+	.services-sub .sub-text {
+		text-align: center;
+	}
+
+	.services-container .text-seperator {
+		display: none;
+	}
+
+	.sub .sub-text {
+		text-align: center;
+	}
+
+	.portfolio-img-display {
+    	display: none;
+	}	
+
+	.portfolio-container .text-column .text-seperator {
+		display: none;
+	}
+
+	.process-content .text-seperator {
+		display: none;
+	}
+
+	.process-content .sub-text {
+		text-align: center;
+	}
+
+	.testimonials-outer {
+		display: none;
+	}
+
+	.banner-container .text-column {
+		text-align: left;
+	}
+
+	input#mobile.form-control {
+		display: none;
+	}
+	/***************** End of @media screen and (max-width: 767px) and (min-width: 601px) **********************/
+}
+
+/* -- 4 landscape tablets 1000-768 -- */
+@media screen and (max-width: 999px) and (min-width: 768px) {
+	/***************** STYLES THE CONTACT.PHP PAGE **********************/
+	.navbar {
+		display: none;
+	}800
+
+	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
+		position: relative !important;
+	} 
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.contact-me {
+		margin: 0;
+		padding: 0 48px;
+	}
+
+	.contact-page-panel-left {
+		display: none;
+	}
+
+	.contact-page-panel-right {
+		width: 96vw;
+	}
+
+	.toggle-links {
+		margin: 0rem auto 0 auto;
+	}
+
+	.form-1 .form-group {
+	    margin: 0;
+	    margin-right: 12px;
+	    width: 94.3%;
+	}
+
+	.form-1 .form-control {
+	    margin: 0;
+	    width: 96%;
+	    font-size: 0.7em;
+	    height: auto;
+	    padding: 1em 0 1em 1em;
+	}
+	.form-1 .text-box-size {
+    width: 100%;
+    padding: 19px 0px 0 7px;
+    padding: 1rem .5rem;
+    height: 40px;
+    font-size: 0.9em;
+	}
+
+	.form-1 .form-row {
+		padding: 0 0 1em 0;
+	}
+
+	.form-2 .form-control {
+    	width: 100%;
+    	font-size: .9em;
+    	height: inherit;
+    	padding: 1em 0 1em 1em;
+
+	}
+
+	.box-size {
+		margin-right: 12px;
+	}
+
+	.row {
+		margin: 0;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.space {
+		height: 16px;
+	}
+
+	.form-2 .text-seperator {
+	    margin: 48px 0;
+	}
+
+	.form-row-inner {
+	    margin-right: 8px;
+	}
+
+	.form-row-inner label {
+    	padding: .5em;
+	}
+
+	.form-row label:before {
+	    width: 13.2%;
+	    height: 55%;
+	}
+
+	.form-row label:after {
+    	left: 78.5%;
+	}
+
+	.form-row-inner label span {
+	    font-size: .7em;
+	}
+
+	.form-2 .form-group {
+		margin: 0;
+	    padding: 0 20px 0 0;
+		
+	}
+	/***************** STYLES THE Services.html PAGE **********************/
+	.hdr-lg h1 {
+		font-size: 48px;
+	}
+
+
+	.services-welcome-info-container .services-text-column {
+		padding: 3em .5em;
+	}
+
+	.services-welcome-info-sub {
+    	width: 100%;
+	}
+
+	.services-text-column .sub-text {
+    	font-size: 1em;
+	}
+	.service-grid {
+	    display: flex;
+	    flex-direction: row;
+	    padding: 1em;
+	    text-align: center;
+	}
+
+	.service-grid-left-content p {
+    	line-height: 2em;
+	}
+
+	.service-grid-right-content p {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE About.html PAGE **********************/
+	.experience-info-panel-inner {
+    	padding: 1em 1em;
+	}
+
+	.right-side-header-bold p {
+    	line-height: 1.6em;
+	}
+
+	.right-side-header-bold h2 {
+    	padding-bottom: 1em !important;
+	}
+
+	.services-text-column .sub-text {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE index.php PAGE **********************/
+
+	.about-panel-top-inner-left {
+    	left: 1em;
+	}
+
+	.about-panel-top-inner-right {
+    	right: 1em;
+	}
+
+	.services-img-bg {
+		display: none;
+	}
+
+	.text-column {
+		text-align: center;
+		padding: 1em;
+	}
+
+	.services-sub .sub-text {
+		text-align: center;
+	}
+
+	.services-container .text-seperator {
+		display: none;
+	}
+
+	.sub .sub-text {
+		text-align: center;
+	}
+
+	.portfolio-img-display {
+    	display: none;
+	}	
+
+	.portfolio-container .text-column .text-seperator {
+		display: none;
+	}
+
+	.process-content .text-seperator {
+		display: none;
+	}
+
+	.process-content .sub-text {
+		text-align: center;
+	}
+
+	.testimonials-outer {
+		display: none;
+	}
+
+	.banner-container .text-column {
+		text-align: left;
+	}
+
+	input#mobile.form-control {
+		display: none;
+	}
+
+		/***************** End of @media screen and (max-width: 999px) and (min-width: 768px) **********************/
+}
+
+ @media screen and (max-width: 1199px) and (min-width: 1000px) {
+
+	
+		/***************** End of @media screen and (max-width: 1199px) and (min-width: 1000px) **********************/
+}
