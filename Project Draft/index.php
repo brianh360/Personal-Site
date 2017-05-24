@@ -1,42 +1,38 @@
 <?php
+if (isset($_POST["submit"])) {
+
   $name = $_POST['name'];
   $email = $_POST['email'];
   $mobile = $_POST['mobile'];
-  $subject = $_POST['subject'];
   $message = $_POST['message'];
 
   $from = 'Website Contact Form';
   $to = 'therealbrianhurst@gmail.com';
-  $subject2 = 'New Submission from Website Contact Form';
+  $subject = 'New Submission from Website Contact Form';
 
   $body = "From: $name\n E-mail: $email\n Message: $message";
 
+
   if (!$_POST['name']) {
-    $errName = 'Please enter your name';
-  }
+          $errName = 'Please enter your name';
+
+    }
 
 if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   $errEmail = 'Please enter a valid email address';
 }
 
-  if ($_POST['submit']) {
-    if (mail ($to, $subject, $body, $from)) {
-      echo '<p>Your message has been sent!</p>';
-    } else {
-          echo '<p>Something went wrong, go back and try again!</p>';
-        }
-    }
-  }
-
 // If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+if (!$errName && !$errEmail) {
   if (mail ($to, $subject, $body, $from)) {
     $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+    header("Location:index.php");
   } else {
     $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
   }
 }
-  }
+
+}
 
 ?>
 
@@ -64,7 +60,6 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
       <div class="inner-wrap">
         <span class="hide-nav">&larr;</span>
      <h1 title="Brian T. Hurst">
-        <a href="#"><img src="Source/css/logo4.png" class="logo" width="115px" height="72px"></a>
      </h1>
       </div>
 
@@ -168,6 +163,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 
         </div>
         </div>
+        
 <!-- Portfolio Panel -->
         <div class="portfolio-panel panel">
           <div class="inner-panel">
@@ -238,25 +234,18 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                     <h3 style="margin-bottom: 25px;text-align: center;font-size: 32px;font-weight: 700;">Get in Touch!</h3>
             <div class="form-group">
             <input type="text" class="form-control" id="name" name="name" placeholder="Name*" required>
-            <?php echo "<p class='text-danger'>$errName</p>";?>
           </div>
           <div class="form-group">
             <input type="email" class="form-control" id="email" name="email" placeholder="Email*" required>
-            <?php echo "<p class='text-danger'>$errName</p>";?>
           </div>
           <div class="form-group">
             <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-            <?php echo "<p class='text-danger'>$errName</p>";?>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-            <?php echo "<p class='text-danger'>$errName</p>";?>
           </div>
                     <div class="form-group">
                     <textarea class="form-control" name="message" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
                         <span class="help-block"><p id="characterLeft" class="help-block ">What's on your mind?</p></span>                    
                     </div>
-            <?php echo $result; ?>  
+            
         <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" value="Send">Submit Form</button>
         </form>
     </div>
@@ -276,7 +265,6 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                           </div>
 
                   </div>
-
 
                    <div class="testimonials-box-sm ">
                   <div class="testimonial drop">
@@ -413,3 +401,4 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
     });
 </script>
 </html>
+
