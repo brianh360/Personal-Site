@@ -71,7 +71,6 @@ if (!$errName && !$errEmail) {
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -146,6 +145,35 @@ if (!$errName && !$errEmail) {
             </div>
         </div>
     </header>
+
+   <!-- MOBILE MENU STARS HERE -->
+    <div class="mobile-menu-overlay">
+      <div class="menu">
+            <ul class="movement-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Portfolio</a></li>
+             <li> <a href="#">Contact</a></li>
+            </ul>
+            <p class="footer-copyright mobile-menu-copyright">Copyright © Your Company 2017. All Rights Reserved
+          </div>
+
+
+              
+    </div>
+
+      <div class="expanded-mobile-menu">
+        <a href="#">
+          <i class="fa fa-bars menu-toggle" aria-hidden="true"></i>
+          <i class="fa fa-times close-mobile-menu-overlay" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="menu-logo">
+          <img src="http://262fdo1ay0gn2mr7xv1y7xfv.wpengine.netdna-cdn.com/wp-content/themes/orourke-twig/assets/images/orourke-logo-white.svg">
+        </a>
+          
+      </div>
+    <!-- MOBILE MENU ENDS HERE -->
 
  <!-- Main Body -->
     <div class="contact-page-panel panel">
@@ -317,14 +345,14 @@ if (!$errName && !$errEmail) {
         <div class="footer-inner">
           <div class="footer-content">
             <div class="footer-nav">
-              <ul style="display: inline-flex;">
-                <a href="#" target="_blank"><li class="footer-nav-list">Home</li></a>
+             <ul style="display: inline-flex;">
+                <a href="index.html" target="_blank"><li class="footer-nav-list">Home</li></a>
                 <li style="font-size: 14px;">&#9642;</li>
-                <a href="#" target="_blank"><li class="footer-nav-list">About</li></a>
+                <a href="about.html" target="_blank"><li class="footer-nav-list">About</li></a>
                 <li style="font-size: 14px;">&#9642;</li>
-                <a href="#" target="_blank"><li class="footer-nav-list">Services</li></a>
+                <a href="services.html" target="_blank"><li class="footer-nav-list">Services</li></a>
                 <li style="font-size: 14px;">&#9642;</li>
-                <a href="#" target="_blank"><li class="footer-nav-list">Contact</li></a>
+                <a href="contact.html" target="_blank"><li class="footer-nav-list">Contact</li></a>
               </ul>
               <p class="footer-copyright">Copyright © Your Company 2017. All Rights Reserved
               </p>
