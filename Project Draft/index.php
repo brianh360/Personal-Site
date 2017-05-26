@@ -56,28 +56,37 @@ if (!$errName && !$errEmail) {
 
     <div class="container">
 <!-- Sidebar -->
-    <header class="sidebar-nav">
-      <div class="inner-wrap">
-        <span class="hide-nav">&larr;</span>
-     <h1 title="Brian T. Hurst">
-     </h1>
-      </div>
-
-      <span class="mobile-menu">☰ Menu</span>
-      <div class="menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Process</a></li>
-           <li> <a href="#">Contact</a></li>
-          </ul>
-      </div>
-
-      <div class="socials">
-        <button class="email-button">Email Me!</button><span class="button-open">therealbrianhurst@gmail.com</span>
-      </div>
+    <header>
     </header>
+
+    <!-- MOBILE MENU STARS HERE -->
+    <div class="mobile-menu-overlay">
+      <div class="menu">
+            <ul class="movement-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Portfolio</a></li>
+             <li> <a href="#">Contact</a></li>
+            </ul>
+            <p class="footer-copyright mobile-menu-copyright">Copyright © Your Company 2017. All Rights Reserved
+          </div>
+
+
+              
+    </div>
+
+      <div class="expanded-mobile-menu">
+        <a href="#">
+          <i class="fa fa-bars menu-toggle" aria-hidden="true"></i>
+          <i class="fa fa-times close-mobile-menu-overlay" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="menu-logo">
+          <img src="http://262fdo1ay0gn2mr7xv1y7xfv.wpengine.netdna-cdn.com/wp-content/themes/orourke-twig/assets/images/orourke-logo-white.svg">
+        </a>
+          
+      </div>
+    <!-- MOBILE MENU ENDS HERE -->
 
       <div class="about-panel panel">
         <div class="inner-about-panel">
@@ -163,7 +172,7 @@ if (!$errName && !$errEmail) {
 
         </div>
         </div>
-        
+
 <!-- Portfolio Panel -->
         <div class="portfolio-panel panel">
           <div class="inner-panel">
@@ -401,4 +410,6 @@ if (!$errName && !$errEmail) {
     });
 </script>
 </html>
+
+
 
