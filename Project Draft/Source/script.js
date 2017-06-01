@@ -26,6 +26,8 @@ let theIndex = document.querySelector('#index');
 let theServices = document.querySelector('#services');
 let theAbout = document.querySelector('#about');
 let theContact = document.querySelector('#contact');
+let thePortfolio = document.querySelector('#portfolio');
+
 if (theIndex) {
 
 let ID;
@@ -129,14 +131,6 @@ currentTime();
 clockBounce();
 
 
-/* Slider for the images on the homepage
-
-** when the user is at eye level of the slider, make it swap between two or three photos. 
-Slide one photo out, then slide another in, when the user scrolls away from the eye level view, stop the slider
-
-*/
-
-// drops down the advertisment into the footer, debounced so the scroll doesnt go crazy on the bandwith bruh. 
 
 function dropModalIn () {
 	let bannerPanel = document.querySelector('.banner-panel');
@@ -200,8 +194,9 @@ window.addEventListener('scroll', debounce(bubbleMove));
 
 }
 
+
 // Fixes the nav bar after a certain distance, 
-if (theServices || theAbout || theContact) {
+if (theServices || theAbout || theContact || thePortfolio) {
 	let nav = document.querySelector('.navbar-default');
 
 function navScroll () {
@@ -218,6 +213,40 @@ function navScroll () {
 }
 
 }
+
+// if (theServices || theAbout || theContact || thePortfolio || theIndex) {
+
+// 	function openMobileOverlay () {
+
+// 		overlay.classList.add('mobile-menu-overlay-active');
+// 		open.style.display = 'none';
+// 		close.style.display = 'block';
+// 		menu.classList.add('menu-open-active');
+// 		copyright.classList.add('mobile-menu-copyright-active');
+// 	}	
+
+// 	function closeMobileOverlay () {
+
+// 		overlay.classList.remove('mobile-menu-overlay-active');
+// 		open.style.display = 'block';
+// 		close.style.display = 'none';
+// 		menu.classList.remove('menu-open-active');
+// 		copyright.classList.remove('mobile-menu-copyright-active');
+
+// 	}
+
+
+// 	let close = document.querySelector('.close-mobile-menu-overlay');
+// 	let open = document.querySelector('.menu-toggle');
+// 	let overlay = document.querySelector('.mobile-menu-overlay');
+// 	let menu = document.querySelector('.movement-menu');
+// 	let copyright = document.querySelector('.mobile-menu-copyright');
+
+// 	open.addEventListener('click', openMobileOverlay);
+// 	close.addEventListener('click', closeMobileOverlay);
+
+// }
+
 
 window.addEventListener('scroll', navScroll);
 
@@ -249,90 +278,90 @@ let charArray = this.value.length;
 
 formMessage.addEventListener('keydown', charsLeft);
 	
-	let contactNav = Array.from(document.querySelectorAll('.toggle-links a'));
-	let form1 = document.querySelector('.form-1');
-	let form2 = document.querySelector('.form-2');
+// 	let contactNav = Array.from(document.querySelectorAll('.toggle-links a'));
+// 	let form1 = document.querySelector('.form-1');
+// 	let form2 = document.querySelector('.form-2');
 
-		form1.classList.add('form-active');
-		contactNav[0].classList.add('contact-active');
+// 		form1.classList.add('form-active');
+// 		contactNav[0].classList.add('contact-active');
 
-		function contactFlip () {
-			contactNav[0].classList.remove('contact-active');
-			contactNav[1].classList.remove('contact-active');
-			form1.classList.remove('form-active');
-			form2.classList.remove('form-active');
+// 		function contactFlip () {
+// 			contactNav[0].classList.remove('contact-active');
+// 			contactNav[1].classList.remove('contact-active');
+// 			form1.classList.remove('form-active');
+// 			form2.classList.remove('form-active');
 
-			this.classList.add('contact-active');
+// 			this.classList.add('contact-active');
 
-			if (this == contactNav[0])
-			{
-				form1.classList.add('form-active');
-			} else {
-				form2.classList.add('form-active');
-			}
+// 			if (this == contactNav[0])
+// 			{
+// 				form1.classList.add('form-active');
+// 			} else {
+// 				form2.classList.add('form-active');
+// 			}
 
-	let deliverables = document.querySelector('input[name="deliverables"]');
-	let checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
-	let clickToggle = 0;
-	let lastClicked;
-	console.log('here');
-	console.log(checkboxes);
-	console.log(deliverables);
+// 	let deliverables = document.querySelector('input[name="deliverables"]');
+// 	let checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+// 	let clickToggle = 0;
+// 	let lastClicked;
+// 	console.log('here');
+// 	console.log(checkboxes);
+// 	console.log(deliverables);
 
-	if (checkboxes)
-	{
-		checkboxes.forEach(function (box) {
+// 	if (checkboxes)
+// 	{
+// 		checkboxes.forEach(function (box) {
 
-			box.addEventListener('click', sendDeliverables);
-		});
+// 			box.addEventListener('click', sendDeliverables);
+// 		});
 
-		function sendDeliverables () {
+// 		function sendDeliverables () {
 
-			if (lastClicked == this.value)
-			{
-				deliverables.value = "";
-				lastClicked = "";
+// 			if (lastClicked == this.value)
+// 			{
+// 				deliverables.value = "";
+// 				lastClicked = "";
 
-				checkboxes.forEach(function (boxes) {
+// 				checkboxes.forEach(function (boxes) {
 
-					if (boxes.checked)
-					{
-						deliverables.value = boxes.defaultValue;
-						lastClicked = deliverables.value;
-					}
-				});
-				return;
-			}
+// 					if (boxes.checked)
+// 					{
+// 						deliverables.value = boxes.defaultValue;
+// 						lastClicked = deliverables.value;
+// 					}
+// 				});
+// 				return;
+// 			}
 
-			deliverables.value = this.value;
-			console.log(deliverables.value);
+// 			deliverables.value = this.value;
+// 			console.log(deliverables.value);
 
-			clickToggle++;
-			lastClicked = this.value;
-		}
-	}
-	}
+// 			clickToggle++;
+// 			lastClicked = this.value;
+// 		}
+// 	}
+// 	}
 
-	contactNav.forEach( function (navbutton){
-		navbutton.addEventListener('click', contactFlip);
-	});
+// 	contactNav.forEach( function (navbutton){
+// 		navbutton.addEventListener('click', contactFlip);
+// 	});
 
-	let labels = Array.from(document.querySelectorAll('.form-row-inner label'));
-	let labelContent = Array.from(document.querySelectorAll('label span'));
+// 	let labels = Array.from(document.querySelectorAll('.form-row-inner label'));
+// 	let labelContent = Array.from(document.querySelectorAll('label span'));
 	
 
-	function addHighlight (e) {
-		if (e.target.matches('input'))return;
-		let spanToChange = this.querySelector('span');
+// 	function addHighlight (e) {
+// 		if (e.target.matches('input'))return;
+// 		let spanToChange = this.querySelector('span');
 
-		this.classList.toggle('label-active');
-		spanToChange.classList.toggle('wht');
-	}
+// 		this.classList.toggle('label-active');
+// 		spanToChange.classList.toggle('wht');
+// 	}
 
-	labels.forEach(function (label) {
-		label.addEventListener('click', addHighlight);
-	});
-}
+// 	labels.forEach(function (label) {
+// 		label.addEventListener('click', addHighlight);
+// 	});
+// }
 
 
 
@@ -360,3 +389,36 @@ if (theIndex || theContact) {
 button.addEventListener('click', displayMessage);
 
 }
+}
+
+var contactNav = $('.toggle-links a');
+			var form1 = $('.form-1');
+			var form2 = $('.form-2');
+			var deliverables = $('input[name="deliverables"]');
+			var checkboxes = $('input[type="checkbox"]');
+			console.log(checkboxes);
+			var clickToggle = 0;
+			var lastClicked;
+
+			$(form1).addClass('form-active');
+			$(contactNav).first().addClass('contact-active');
+
+
+			$(contactNav).each( function (navbutton) {
+				navbutton.bind('click', function () {
+
+
+				$(contactNav).first().removeClass('contact-active');
+				$(contactNav).last().removeClass('contact-active');
+				$(form1).removeClass('form-active');
+				$(form2).removeClass('form-active');
+
+
+				this.addClass('contact-active');
+
+				if (this == contactNav.first())
+				{
+					$(form1).addClass('form-active');
+				} else {
+					$(form2).addClass('form-active');
+				}
