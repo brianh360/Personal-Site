@@ -3,6 +3,8 @@ html {
 	font-family: Lora, Helvetica Neue,Helvetica,Arial,sans-serif;
 	 -webkit-text-size-adjust: 100%;
      -ms-text-size-adjust: 100%;
+     margin: 0;
+     padding: 0;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
 	margin: 0;
 	color: #252527;
 	overflow:auto;
+	padding: 0;
 }
 
 footer {
@@ -80,9 +83,9 @@ legend {
     margin-bottom: 2rem;
 }
 
+.fa {
 
-
-
+}
 .small {
 	font-size:12px;
 	font-weight: 400;
@@ -118,7 +121,7 @@ legend {
 
 
 .intro-divider {
-	width: 400px;
+	width: 36%;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -135,6 +138,18 @@ legend {
 	height:32px;
 }
 
+.required {
+	background: #BDFFFF;
+}
+
+.lightblue {
+	color: #438392;
+	transition: 2s;
+}
+
+.lightblue:hover {
+	color: #ffc107;
+}
 .button {
 	font-family: lora;
     padding: 12px 24px;
@@ -153,28 +168,26 @@ legend {
 
 .button:hover {
 	animation: enlarge 0.97s;
-
-/*	transform: scale(1.1, 1.1);*/
 }
+
 @keyframes enlarge {
-		10% {transform: scale(1.1, 1.1);}
-		50% {transform: scale(1.2, 1.2);}
-		100% {transform: scale(1, 1);}
-	}
+	10% {transform: scale(1.1, 1.1);}
+	50% {transform: scale(1.2, 1.2);}
+	100% {transform: scale(1, 1);}
+}
 
 .container {
-height: auto;
-width: auto;
-display: block;
-width: 100%;
-height: 2500px;
+	height: auto;
+	width: auto;
+	display: block;
+	width: 100%;
+	height: 2500px;
 }
 
 .sidebar-nav {
 	display: none !important;
 	background-color: rgb(29, 58, 84);
-/*	background: url(sidebarbackground5.png) fixed no-repeat;
-*/	width: 250px;
+	width: 250px;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -184,7 +197,7 @@ height: 2500px;
 	overflow: auto;
 }
 
-.sidebar-nav > li{
+.sidebar-nav > li {
 
 }
 
@@ -200,8 +213,7 @@ height: 2500px;
 .inner-wrap h1 a {
 	color:#222;
 	font-size:38px;
-/*	padding:25px;
-*/	text-transform: uppercase;
+	text-transform: uppercase;
 	display: block;
 	text-decoration: none;
 	text-align: center;
@@ -215,30 +227,31 @@ height: 2500px;
     margin-bottom: 100px;
 }
 
-.menu {
-text-align: center;
-font-size: 20px;
-color: black;
-
-}
 .menu ul {
-border-top: 1px solid rgba(0,0,0,0.3);
+    margin: 8em 0;
+    border-top: 1px solid rgba(0,0,0,0.3);
     border-bottom: 1px solid rgba(255,255,255,0.04);
     margin-bottom: 20px;
+    transition: 3s;
+    -webkit-transition: 3s;
+	transition-timing-function: cubic-bezier(0, 6.07, 0.25, 1);
 }
 
-.menu li {
 
+.menu li {
+    transition: 3s;
+    -webkit-transition: 3s;
+	transition-timing-function: cubic-bezier(0, 6.07, 0.25, 1);
 }
 
 .menu a {
-text-decoration: none;
-color: #777;
+	text-decoration: none;
+	color: #777;
 }
 
 .menu ul li a {
-	width: 87%;
-	padding: 20px;
+	width: 100%;
+	padding: 20px 0;
 	display: inline-block;
 	color: #e8e7e9;
 	border: 0;
@@ -252,16 +265,15 @@ color: #777;
 }
 
 .menu ul li a:hover {
-	color: #fff;
-/*	background-color: rgba(232, 231, 233, 0.65);
-*/	font-weight: 500;
+	color: rgb(255, 193, 7);
+	font-weight: 500;
 	border: 1px #222 solid;
 	border-radius: 4px;
 }
 
 .menu ul li a:active {
-color: black;
-background-color: #777;
+	color: black;
+	background-color: #777;
 }
 
 .socials {
@@ -271,7 +283,7 @@ background-color: #777;
 }
 
 .email-button {
-color: #e8e7e9;
+	color: #e8e7e9;
     background: rgba(70, 114, 232, 0.11);
     width: auto;
     font-weight: 700;
@@ -285,12 +297,13 @@ color: #e8e7e9;
 }
 
 .email-button:hover {
-color: #e8e7e9;
-background-color: #3071a9;
-border-color: #285e8e;
-border-radius: 4px;
-font-family: Arial;
+	color: #e8e7e9;
+	background-color: #3071a9;
+	border-color: #285e8e;
+	border-radius: 4px;
+	font-family: Arial;
 }
+
 .hide-nav {
 	position: absolute;
 	color: white;
@@ -304,14 +317,138 @@ font-family: Arial;
 	cursor: pointer;
 }
 
-
 .button-open {
 	display: none;
 }
-
-.mobile-menu {
+.movement-menu {
 	display: none;
 }
+
+.menu-open-active {
+	display: block;
+	animation: pushups 3s;
+	-webkit-animation: pushups 3s; 
+}
+
+.mobile-menu-copyright {
+	text-align: center;
+    transition: 2s;
+    margin: 0 !important;
+}
+
+.mobile-menu-copyright-active {
+	animation: show 6s;
+	-webkit-animation: show 6s; 
+}
+
+@keyframes show {
+
+from {
+		opacity: 0;
+		color: #777;
+
+	}
+
+	to {
+		opacity: 1;
+		color:#fff;
+	}
+
+}
+
+
+@keyframes pushups {
+
+from {
+	transform: translateY(400px);
+
+	}
+
+	to {
+		transform: translateY(0);
+	}
+
+}
+
+.close-mobile-menu-overlay {
+	font-size: 3em;
+    color: #f9f9f9;
+    float: left;
+    padding: .35em .5em;
+    font-size: 2em;
+    line-height: 1;
+    position: relative;
+    display: none;
+}
+
+.close-mobile-menu-overlay:hover {
+	cursor: pointer;
+	color: grey;
+}
+
+.mobile-menu-overlay {
+	position: fixed;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: calc(100%);
+	height: 100%;
+	z-index: -1;
+	display: flex;
+	opacity: 0;
+	flex-direction: column;
+	color: #fff;
+	-webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.mobile-menu-overlay-active {
+	opacity: 1;
+	z-index: 8888;
+}
+
+.expanded-mobile-menu {
+	margin: 0;
+	z-index: 10000;
+	position: fixed;
+    background: #000;
+    top: 0;
+	width: calc(100%);
+}
+
+.menu-toggle {
+	font-size: 3em;
+    color: #f9f9f9;
+    float: left;
+    padding: .35em .5em;
+    font-size: 2em;
+    line-height: 1;
+    position: relative;
+}
+
+.menu-logo a {
+    float:right;
+    color: #fff;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.menu-logo img {
+	height: 30px;
+    width: 114px;
+    margin: 0.7em .5em;
+    float: right;
+}
+
+
+
+.menu-toggle:hover {
+	cursor: pointer;
+	color: grey;
+}
+
 
 .about-panel {
 	background: #eee;
@@ -321,8 +458,6 @@ font-family: Arial;
 }
 
 .inner-about-panel {
-/*	background: rgb(160, 206, 78) url(http://www.pascalvangemert.nl/view/images/background.jpg)no-repeat;
-*/	
 	background: url(https://blackrockdigital.github.io/startbootstrap-landing-page//img/intro-bg.jpg) no-repeat center center;) no-repeat center center;
 	display: flex;
 	flex-direction: row;
@@ -413,13 +548,10 @@ font-family: Arial;
 
 }
 
-
-
-
-
 .about-content {
-flex: 1;
-text-align: center;
+	flex: 1;
+	text-align: center;
+	width: 100%;
 }
 
 .about-button {
@@ -442,10 +574,10 @@ text-align: center;
 
 .about-button:hover {
 	padding: 0 32px;
-color: #e8e7e9;
-background-color: #4672e8;
-border: 1px #4672e8 solid;
-font-size: 18px;
+	color: #e8e7e9;
+	background-color: #4672e8;
+	border: 1px #4672e8 solid;
+	font-size: 18px;
 }
 
 
@@ -487,17 +619,17 @@ font-size: 18px;
 
 .arrows path.a1 {
 	animation-delay:-1s;
-	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+	-webkit-animation-delay:-1s; /* Safari å’Œ Chrome */
 }
 
 .arrows path.a2 {
 	animation-delay:-0.5s;
-	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+	-webkit-animation-delay:-0.5s; /* Safari å’Œ Chrome */
 }
 
 .arrows path.a3 {	
 	animation-delay:0s;
-	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+	-webkit-animation-delay:0s; /* Safari å’Œ Chrome */
 }
 
 .services-panel {
@@ -514,10 +646,10 @@ font-size: 18px;
 }
 
 .services-content {
-flex: 3;
-display: flex;
-flex-direction: row;
-padding: 48px 0;
+	flex: 3;
+	display: flex;
+	flex-direction: row;
+	padding: 48px 0;
 }
 
 .services-container {
@@ -1116,7 +1248,7 @@ display: none;
 }
 
 .form-1 .text-box-size {
-	width: 96.8%;
+	width: 100%;
     padding: 24px 0px 0 24px;
 }
 
@@ -1228,7 +1360,6 @@ float: right
 .banner-panel {
 	background: url(http://tutsplus.github.io/bootstrap-tour-tutorial/img/banner-bg.jpg) no-repeat center
 	center;
-	z-index: 10000;
 }
 
 .banner-content {
@@ -1443,8 +1574,8 @@ margin-right: 8px;
 }
 
 .footer-nav {
-flex: 1;
-width: 50%;
+	flex: 1;
+	width: 100%;
 }
 
 .footer-nav-list {
@@ -2154,12 +2285,11 @@ display: block !important;
     padding: 20px 40px;
 }
 .navbar-default .navbar-brand {
-	background: #fff;
-    border: 1px solid transparent;
+    border: 1px solid #fff;
     border-radius: 4px;
     height: 21px;
     width: 89px;
-  color: #777;
+  	color: #777;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -2373,12 +2503,13 @@ header {
   text-align: center;
   color: white;
 }
+
+
 header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
 }
 header .intro-text .intro-lead-in {
-/*  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
@@ -2386,13 +2517,12 @@ header .intro-text .intro-lead-in {
 }
 header .intro-text .intro-heading {
 	font-family: sans-serif;
-/*  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 25px;
-      text-shadow: 1px 1px black;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 50px;
+	margin-bottom: 25px;
+    text-shadow: 1px 1px black;
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -2400,21 +2530,19 @@ header .intro-text .intro-heading {
     padding-bottom: 138px;
   }
   header .intro-text .intro-lead-in {
-/*    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     font-style: italic;
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
-        text-shadow: 1px 1px black;
+    text-shadow: 1px 1px black;
   }
   header .intro-text .intro-heading {
-/*    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-*/    text-transform: uppercase;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 75px;
     line-height: 75px;
     margin-bottom: 50px;
-        text-shadow: 1px 1px black;
+    text-shadow: 1px 1px black;
   }
 }
 
@@ -2761,14 +2889,11 @@ background-image: url(https://msv5-prod.s3.amazonaws.com/filer_public/c0/fc/c0fc
 
 .experience-info-panel {
     width: auto;
-/*    height: 1411px;*/
     background:#f3efe0;
-
 }
 
 .experience-info-panel-inner {
 	padding: 48px 248px;
-
 }
 
 .resume-list-content-holder {
@@ -2821,10 +2946,10 @@ margin:0 0 16px 0;
 .resume-header-panel {
 	position: relative;
 }
+
 .resume-bold-header {
 
 }
-
 .resume-bold-header h2 {
 	font-size: 12px;
     font-weight: bold;
@@ -2840,12 +2965,12 @@ margin:0 0 16px 0;
 }
 
 .right-side-header-bold p {
-/*	margin: 0;*/
 }
+
 .resume-left-side-content {
-	flex:2;
-/*    padding-right: 16%;*/
+	flex: 2;
 }
+
 .left-side-header-bold {
 	padding-bottom: 24px;
 
@@ -2894,9 +3019,9 @@ margin:0 0 16px 0;
 }
 
 .resume-content-portion {
-display: block;
-margin: 0 0 32px 0;
-height: 150px;
+	display: block;
+	margin: 0 0 32px 0;
+	height: 150px;
 }
 
 .small-pt {
@@ -2923,6 +3048,7 @@ height: 150px;
     font-size: 16px;
     letter-spacing: 1px;
 }
+
 .resume-block-right {
     height: 100%;
     float: right;
@@ -3060,6 +3186,7 @@ height: 150px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: #fff;
 }
 
 .contact-page-panel-left {
@@ -3146,6 +3273,52 @@ height: 150px;
 .contact-social-icons {
 text-align: center;
 	
+}
+
+.portfolio-container-1 {
+
+}
+
+.portfolio-container-1-inner {
+	padding: 3em;
+}
+
+.portfolio-container-content-holder {
+	padding: 2em 5em;
+}
+
+.portfolio-container-content {
+
+}
+
+.portfolio-container-content p {
+    font-size: 1.3em;
+    line-height: 1.9em;
+}
+
+.black-bar-seperator {
+	width: 100%;
+	height: auto;
+	background: #000;
+}
+
+.black-bar-seperator p {
+	font-family: sans-serif;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1em;
+    padding: .62em;
+    letter-spacing: .8px;
+}
+.portfolio-container-2-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.portfolio-container-row-inner {
+
 }
 
 .portfolio-page-panel-outer{
@@ -3244,9 +3417,27 @@ font-size: 32px;
     border-radius: 4px;
 }
 
-/* -- 3 portrait tablets 768-600 -- */
-@media screen and (max-width: 767px) and (min-width: 601px) {
-	/***************** STYLES THE CONTACT.PHP PAGE **********************/
+/* -- 1 small phones less than 480px -- */
+@media screen and (max-width: 479px) {
+
+/***************** STYLES THE CONTACT.PHP PAGE **********************/
+	body#contact.index header {
+		background-size: 1538.46px 1000px;
+	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
+	}
+
+	body#portfolio.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
+	background-size: 1338.46px 800px;
+}
+	.footer-content {
+		text-align: center;
+		padding: 0;
+	}
+	.contact-page-panel-right-inner {
+		padding: 24px 0;
+	}
+
 	.navbar {
 		display: none;
 	}
@@ -3261,7 +3452,6 @@ font-size: 32px;
 
 	.contact-me {
 		margin: 0;
-		padding: 0 48px;
 	}
 
 	.contact-page-panel-left {
@@ -3284,7 +3474,7 @@ font-size: 32px;
 
 	.form-1 .form-control {
 	    margin: 0;
-	    width: 96%;
+	    width: 97%;
 	    font-size: 0.7em;
 	    height: auto;
 	    padding: 1em 0 1em 1em;
@@ -3303,10 +3493,13 @@ font-size: 32px;
 
 	.form-2 .form-control {
     	width: 100%;
-    	font-size: .9em;
+    	font-size: .7em;
     	height: inherit;
     	padding: 1em 0 1em 1em;
+	}
 
+	textarea#message.form-control.lg-box {
+		font-size: .9em;
 	}
 
 	.box-size {
@@ -3320,6 +3513,10 @@ font-size: 32px;
 	    align-items: center;
 	}
 
+	.form-2 .form-row {
+		flex-direction: column;
+	}
+
 	.space {
 		height: 16px;
 	}
@@ -3329,11 +3526,11 @@ font-size: 32px;
 	}
 
 	.form-row-inner {
-	    margin-right: 8px;
+	    margin: 0 8px 8px 0;
 	}
 
 	.form-row-inner label {
-    	padding: .5em;
+    	padding: .7em;
 	}
 
 	.form-row label:before {
@@ -3346,22 +3543,34 @@ font-size: 32px;
 	}
 
 	.form-row-inner label span {
-	    font-size: .7em;
+	    font-size: .5em;
 	}
 
 	.form-2 .form-group {
 		margin: 0;
 	    padding: 0 20px 0 0;
-		
 	}
+
+	.form-container .space {
+		display: none;
+	}
+	/***************** STYLES THE Portfolio.html PAGE **********************/
+
 	/***************** STYLES THE Services.html PAGE **********************/
+	body#services.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
+	}
+
+	.services-text-column .text-seperator {
+		margin-bottom: 3em;
+	}
+
 	.hdr-lg h1 {
 		font-size: 48px;
 	}
 
-
 	.services-welcome-info-container .services-text-column {
-		padding: 3em .5em;
+    	padding: 3em 3em;
 	}
 
 	.services-welcome-info-sub {
@@ -3373,7 +3582,7 @@ font-size: 32px;
 	}
 	.service-grid {
 	    display: flex;
-	    flex-direction: row;
+	    flex-direction: column;
 	    padding: 1em;
 	    text-align: center;
 	}
@@ -3386,9 +3595,38 @@ font-size: 32px;
     	line-height: 2em;
 	}
 
+	.skillset-title h4{
+		text-align: center;
+	    padding-bottom: 1em;
+	    font-size: 1.4em;
+	}
+
+	.skills ul {
+		text-align: center;
+	}
+
 	/***************** STYLES THE About.html PAGE **********************/
+
+	body#about.index header {
+    background-size: 938.46px 800px;
+    background-position: -27px -31px;
+	background-image: url('tomas-jasovsky-178485.jpg');
+	}
+
+	.about-us-personal-image {
+		display: none;
+	}
+
 	.experience-info-panel-inner {
     	padding: 1em 1em;
+	}
+
+	.resume-right-side-content {
+		display: none;
+	}
+
+	.futher-info-panel {
+		text-align: center;
 	}
 
 	.right-side-header-bold p {
@@ -3404,6 +3642,40 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE index.php PAGE **********************/
+	.testimonials-wix {
+	    left: -6px;
+	    top: -47px;
+	}
+	.banner-panel {
+
+	}
+	.contact-panel-inner {
+	    margin: 0;
+	    padding: 0;
+	    width: 100%;
+	}
+	.inner-about-panel ul {
+		width: 80%;
+		padding-bottom: 5em;
+	}
+	.about-panel-top {
+    	display: none;
+	}
+	.text-seperator .banner-sep {
+		 width: 100%;
+	}
+	.hdr-lg .banner-hdr {
+		text-align: center;
+	}
+	.button-dropdown-outer {
+		display: none;
+	}
+	.testimonials-wix {
+		font-size: 7em;
+	}
+	.banner-hdr h1 {
+		font-size: 28px !important;
+	}
 
 	.about-panel-top-inner-left {
     	left: 1em;
@@ -3461,15 +3733,36 @@ font-size: 32px;
 	input#mobile.form-control {
 		display: none;
 	}
-	/***************** End of @media screen and (max-width: 767px) and (min-width: 601px) **********************/
-}
 
-/* -- 4 landscape tablets 1000-768 -- */
-@media screen and (max-width: 999px) and (min-width: 768px) {
+	.form-2 input#mobile.form-control  {
+		display: block;
+	}
+
+	.form-area {
+		margin: 0;
+	}
+
+	.inner-about-panel {
+		background-position: -298px -251px;
+	}
+}
+	/***************** End of @media screen and (max-width: 479px)  **********************/
+
+/* -- 2 large and landscape phones 600-480 -- */
+@media screen and (max-width: 600px) and (min-width: 480px) {
 	/***************** STYLES THE CONTACT.PHP PAGE **********************/
+		body#contact.index header {
+		background-size: 1538.46px 1000px;
+	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
+	}
+
+	.contact-page-panel-right-inner {
+		padding: 24px 0;
+	}
+
 	.navbar {
 		display: none;
-	}800
+	}
 
 	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
 		position: relative !important;
@@ -3515,6 +3808,517 @@ font-size: 32px;
     padding: 1rem .5rem;
     height: 40px;
     font-size: 0.9em;
+	}
+
+	.form-1 .form-row {
+		padding: 0 0 1em 0;
+	}
+
+	.form-2 .form-control {
+    	width: 100%;
+    	font-size: .7em;
+    	height: inherit;
+    	padding: 1em 0 1em 1em;
+	}
+
+	textarea#message.form-control.lg-box {
+		font-size: .9em;
+	}
+
+	.box-size {
+		margin-right: 12px;
+	}
+
+	.row {
+		margin: 0;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.space {
+		height: 16px;
+	}
+
+	.form-2 .text-seperator {
+	    margin: 48px 0;
+	}
+
+	.form-row-inner {
+	    margin-right: 8px;
+	}
+
+	.form-row-inner label {
+    	padding: .5em;
+	}
+
+	.form-row label:before {
+	    width: 13.2%;
+	    height: 55%;
+	}
+
+	.form-row label:after {
+    	left: 78.5%;
+	}
+
+	.form-row-inner label span {
+	    font-size: .5em;
+	}
+
+	.form-2 .form-group {
+		margin: 0;
+	    padding: 0 20px 0 0;
+		
+	}
+	/***************** STYLES THE Services.html PAGE **********************/
+	body#services.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
+	}
+
+	.hdr-lg h1 {
+		font-size: 48px;
+	}
+
+	.services-welcome-info-container .services-text-column {
+    	padding: 3em 3em;
+	}
+
+	.services-welcome-info-sub {
+    	width: 100%;
+	}
+
+	.services-text-column .sub-text {
+    	font-size: 1em;
+	}
+	.service-grid {
+	    display: flex;
+	    flex-direction: column;
+	    padding: 1em;
+	    text-align: center;
+	}
+
+	.service-grid-left-content p {
+    	line-height: 2em;
+	}
+
+	.service-grid-right-content p {
+    	line-height: 2em;
+	}
+
+	.skillset-title h4{
+		text-align: center;
+	    padding-bottom: 1em;
+	    font-size: 1.4em;
+	}
+
+	.skills ul {
+		text-align: center;
+	}
+
+	/***************** STYLES THE About.html PAGE **********************/
+	body#about.index header {
+    background-size: 938.46px 800px;
+    background-position: -27px -31px;
+	background-image: url('tomas-jasovsky-178485.jpg');
+	}
+
+	.experience-info-panel-inner {
+    	padding: 1em 1em;
+	}
+
+	.resume-right-side-content {
+		display: none;
+	}
+
+	.futher-info-panel {
+		text-align: center;
+	}
+
+	.right-side-header-bold p {
+    	line-height: 1.6em;
+	}
+
+	.right-side-header-bold h2 {
+    	padding-bottom: 1em !important;
+	}
+
+	.services-text-column .sub-text {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE index.php PAGE **********************/
+	.about-panel-top {
+		display: none;
+	}
+
+	.banner-hdr h1 {
+		font-size: 28px !important;
+	}
+
+	.about-panel-top-inner-left {
+    	left: 1em;
+	}
+
+	.about-panel-top-inner-right {
+    	right: 1em;
+	}
+
+	.services-img-bg {
+		display: none;
+	}
+
+	.text-column {
+		text-align: center;
+		padding: 1em;
+	}
+
+	.services-sub .sub-text {
+		text-align: center;
+	}
+
+	.services-container .text-seperator {
+		display: none;
+	}
+
+	.sub .sub-text {
+		text-align: center;
+	}
+
+	.portfolio-img-display {
+    	display: none;
+	}	
+
+	.portfolio-container .text-column .text-seperator {
+		display: none;
+	}
+
+	.process-content .text-seperator {
+		display: none;
+	}
+
+	.process-content .sub-text {
+		text-align: center;
+	}
+
+	.testimonials-outer {
+		display: none;
+	}
+
+	.banner-container .text-column {
+		text-align: left;
+	}
+
+	input#mobile.form-control {
+		display: none;
+	}
+
+	.inner-about-panel {
+		background-position: -298px -251px;
+	}
+
+
+	/***************** End of @media screen and (max-width: 600px) and (min-width: 480px) **********************/
+
+}
+
+/* -- 3 portrait tablets 768-600 -- */
+@media screen and (max-width: 767px) and (min-width: 601px) {
+	/***************** STYLES THE CONTACT.PHP PAGE **********************/
+	body#contact.index header {
+		background-size: 1538.46px 1000px;
+	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
+	}
+
+	.contact-page-panel-right-inner {
+		padding: 24px 0;
+	}
+
+	.navbar {
+		display: none;
+	}
+
+	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
+		position: relative !important;
+	} 
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.contact-me {
+		margin: 0;
+		padding: 0 48px;
+	}
+
+	.contact-page-panel-left {
+		display: none;
+	}
+
+	.contact-page-panel-right {
+		width: 96vw;
+	}
+
+	.toggle-links {
+		margin: 0rem auto 0 auto;
+	}
+
+	.form-1 .form-group {
+	    margin: 0;
+	    margin-right: 12px;
+	    width: 94.3%;
+	}
+
+	.form-1 .form-control {
+	    margin: 0;
+	    width: 96%;
+	    font-size: 0.7em;
+	    height: auto;
+	    padding: 1em 0 1em 1em;
+	}
+	.form-1 .text-box-size {
+	    width: 100%;
+	    padding: 19px 0px 0 7px;
+	    padding: 1rem .5rem;
+	    height: 40px;
+	    font-size: 0.9em;
+	}
+
+	.form-1 .form-row {
+		padding: 0 0 1em 0;
+	}
+
+	.form-2 .form-control {
+    	width: 100%;
+    	font-size: .9em;
+    	height: inherit;
+    	padding: 1em 0 1em 1em;
+
+	}
+
+	.box-size {
+		margin-right: 12px;
+	}
+
+	.row {
+		margin: 0;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.space {
+		height: 16px;
+	}
+
+	.form-2 .text-seperator {
+	    margin: 48px 0;
+	}
+
+	.form-row-inner {
+	    margin-right: 8px;
+	}
+
+	.form-row-inner label {
+    	padding: .5em;
+	}
+
+	.form-row label:before {
+	    width: 13.2%;
+	    height: 55%;
+	}
+
+	.form-row label:after {
+    	left: 78.5%;
+	}
+
+	.form-row-inner label span {
+	    font-size: .7em;
+	}
+
+	.form-2 .form-group {
+		margin: 0;
+	    padding: 0 20px 0 0;
+		
+	}
+	/***************** STYLES THE Services.html PAGE **********************/
+	body#services.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
+	}
+
+	.hdr-lg h1 {
+		font-size: 48px;
+	}
+
+
+	.services-welcome-info-container .services-text-column {
+		padding: 3em .5em;
+	}
+
+	.services-welcome-info-sub {
+    	width: 100%;
+	}
+
+	.services-text-column .sub-text {
+    	font-size: 1em;
+	}
+	.service-grid {
+	    display: flex;
+	    flex-direction: row;
+	    padding: 1em;
+	    text-align: center;
+	}
+
+	.service-grid-left-content p {
+    	line-height: 2em;
+	}
+
+	.service-grid-right-content p {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE About.html PAGE **********************/
+	body#about.index header {
+    background-size: 938.46px 800px;
+    background-position: -330px 45px;
+    background-image: url(tomas-jasovsky-178485.jpg);
+	}
+
+	.experience-info-panel-inner {
+    	padding: 1em 1em;
+	}
+
+	.right-side-header-bold p {
+    	line-height: 1.6em;
+	}
+
+	.right-side-header-bold h2 {
+    	padding-bottom: 1em !important;
+	}
+
+	.services-text-column .sub-text {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE index.php PAGE **********************/.
+
+	.inner-about-panel {
+		background-position: -298px -251px;
+	}
+	.banner-hdr h1 {
+		font-size: 28px !important;
+	}
+
+	.about-panel-top-inner-left {
+    	left: 1em;
+	}
+
+	.about-panel-top-inner-right {
+    	right: 1em;
+	}
+
+	.services-img-bg {
+		display: none;
+	}
+
+	.text-column {
+		text-align: center;
+		padding: 1em;
+	}
+
+	.services-sub .sub-text {
+		text-align: center;
+	}
+
+	.services-container .text-seperator {
+		display: none;
+	}
+
+	.sub .sub-text {
+		text-align: center;
+	}
+
+	.portfolio-img-display {
+    	display: none;
+	}	
+
+	.portfolio-container .text-column .text-seperator {
+		display: none;
+	}
+
+	.process-content .text-seperator {
+		display: none;
+	}
+
+	.process-content .sub-text {
+		text-align: center;
+	}
+
+	.testimonials-outer {
+		display: none;
+	}
+
+	.banner-container .text-column {
+		text-align: left;
+	}
+
+	input#mobile.form-control {
+		display: none;
+	}
+	.inner-about-panel {
+		background-position: -298px -251px;
+	}
+
+	/***************** End of @media screen and (max-width: 767px) and (min-width: 601px) **********************/
+}
+
+/* -- 4 landscape tablets 1000-768 -- */
+@media screen and (max-width: 999px) and (min-width: 768px) {
+	/***************** STYLES THE CONTACT.PHP PAGE **********************/
+
+	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
+		position: relative !important;
+	} 
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.contact-me {
+		margin: 0;
+		padding: 0 48px;
+	}
+
+	.contact-page-panel-left {
+		display: none;
+	}
+
+	.contact-page-panel-right {
+		width: 96vw;
+	}
+
+	.toggle-links {
+		margin: 0rem auto 0 auto;
+	}
+
+	.form-1 .form-group {
+	    margin: 0;
+	    margin-right: 12px;
+	    width: 94.3%;
+	}
+
+	.form-1 .form-control {
+	    margin: 0;
+	    width: 96%;
+	    font-size: 0.7em;
+	    height: auto;
+	    padding: 1em 0 1em 1em;
+	}
+	.form-1 .text-box-size {
+	    width: 100%;
+	    padding: 19px 0px 0 7px;
+	    padding: 1rem .5rem;
+	    height: 40px;
+	    font-size: 0.9em;
 	}
 
 	.form-1 .form-row {
@@ -3607,6 +4411,9 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE About.html PAGE **********************/
+	.resume-list-content-holder {
+	    padding: 3em;
+	}
 	.experience-info-panel-inner {
     	padding: 1em 1em;
 	}
@@ -3624,6 +4431,13 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE index.php PAGE **********************/
+	.inner-about-panel {
+			background-position: 2px -102px;
+	}
+
+	.expanded-mobile-menu {
+		display: none;
+	}
 
 	.about-panel-top-inner-left {
     	left: 1em;
@@ -3685,8 +4499,507 @@ font-size: 32px;
 		/***************** End of @media screen and (max-width: 999px) and (min-width: 768px) **********************/
 }
 
- @media screen and (max-width: 1199px) and (min-width: 1000px) {
 
+
+
+ @media screen and (max-width: 1199px) and (min-width: 1000px) {
 	
 		/***************** End of @media screen and (max-width: 1199px) and (min-width: 1000px) **********************/
+		/***************** STYLES THE CONTACT.PHP PAGE **********************/
+	.expanded-mobile-menu {
+		display: none;
+	}
+
+	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
+		position: relative !important;
+	} 
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.contact-me {
+		margin: 0;
+		padding: 0 48px;
+	}
+
+	.contact-page-panel-left {
+		display: none;
+	}
+
+	.contact-page-panel-right {
+		width: 96vw;
+	}
+
+	.toggle-links {
+		margin: 0rem auto 0 auto;
+	}
+
+	.form-1 .form-group {
+	    margin: 0;
+	    margin-right: 12px;
+	    width: 94.3%;
+	}
+
+	.form-1 .form-control {
+	    margin: 0;
+	    width: 96%;
+	    font-size: 0.7em;
+	    height: auto;
+	    padding: 1em 0 1em 1em;
+	}
+	.form-1 .text-box-size {
+    width: 100%;
+    padding: 19px 0px 0 7px;
+    padding: 1rem .5rem;
+    height: 40px;
+    font-size: 0.9em;
+	}
+
+	.form-1 .form-row {
+		padding: 0 0 1em 0;
+	}
+
+	.form-2 .form-control {
+    	width: 100%;
+    	font-size: .9em;
+    	height: inherit;
+    	padding: 1em 0 1em 1em;
+
+	}
+
+	.box-size {
+		margin-right: 12px;
+	}
+
+	.row {
+		margin: 0;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.space {
+		height: 16px;
+	}
+
+	.form-2 .text-seperator {
+	    margin: 48px 0;
+	}
+
+	.form-row-inner {
+	    margin-right: 8px;
+	}
+
+	.form-row-inner label {
+    	padding: .5em;
+	}
+
+	.form-row label:before {
+	    width: 13.2%;
+	    height: 55%;
+	}
+
+	.form-row label:after {
+    	left: 78.5%;
+	}
+
+	.form-row-inner label span {
+	    font-size: .7em;
+	}
+
+	.form-2 .form-group {
+		margin: 0;
+	    padding: 0 20px 0 0;
+		
+	}
+
+/***************** STYLES THE About.html PAGE **********************/
+	.experience-info-panel-inner {
+    	padding: 2em 4em;
+	}
+
+	.right-side-header-bold p {
+    	line-height: 1.6em;
+	}
+
+	.right-side-header-bold h2 {
+    	padding-bottom: 1em !important;
+	}
+
+	.services-text-column .sub-text {
+    	line-height: 2em;
+	}
+
+	.inner-about-panel {
+			background-position: 2px -102px;
+	}
+
+
 }
+
+		/* -- 6 laptops 1300-1200 -- */
+@media screen and (max-width: 1299px) and (min-width: 1200px) {
+
+	.expanded-mobile-menu {
+		display: none;
+	}
+
+	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
+		position: relative !important;
+	} 
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.contact-me {
+		margin: 0;
+		padding: 0 48px;
+	}
+
+	.contact-page-panel-left {
+
+	}
+
+	.contact-page-panel-right {
+		width: 96vw;
+	}
+
+	.toggle-links {
+		margin: 0rem auto 0 auto;
+	}
+
+	.form-1 .form-group {
+	    margin: 0;
+	    margin-right: 12px;
+	    width: 94.3%;
+	}
+
+	.form-1 .form-control {
+	    margin: 0;
+	    width: 96%;
+	    font-size: 0.7em;
+	    height: auto;
+	    padding: 1em 0 1em 1em;
+	}
+	.form-1 .text-box-size {
+	    width: 100%;
+	    padding: 19px 0px 0 7px;
+	    padding: 1rem .5rem;
+	    height: 40px;
+	    font-size: 0.9em;
+	}
+
+	.form-1 .form-row {
+		padding: 0 0 1em 0;
+	}
+
+	.form-2 .form-control {
+    	width: 100%;
+    	font-size: .9em;
+    	height: inherit;
+    	padding: 1em 0 1em 1em;
+
+	}
+
+	.box-size {
+		margin-right: 12px;
+	}
+
+	.row {
+		margin: 0;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.space {
+		height: 16px;
+	}
+
+	.form-2 .text-seperator {
+	    margin: 48px 0;
+	}
+
+	.form-row-inner {
+	    margin-right: 8px;
+	}
+
+	.form-row-inner label {
+    	padding: .5em;
+	}
+
+	.form-row label:before {
+	    width: 13.2%;
+	    height: 55%;
+	}
+
+	.form-row label:after {
+    	left: 78.5%;
+	}
+
+	.form-row-inner label span {
+	    font-size: .7em;
+	}
+
+	.form-2 .form-group {
+		margin: 0;
+	    padding: 0 20px 0 0;
+		
+	}
+	/***************** STYLES THE Services.html PAGE **********************/
+	.hdr-lg h1 {
+		font-size: 48px;
+	}
+
+	.services-welcome-info-container .services-text-column {
+		padding: 3em 7em;
+	}
+
+	.services-welcome-info-sub {
+    	width: 100%;
+	}
+
+	.services-text-column .sub-text {
+    	font-size: 1em;
+	}
+
+	.service-grid {
+	    display: flex;
+	    flex-direction: row;
+	    padding: 1em;
+	    text-align: center;
+	}
+
+	.service-grid-left-content p {
+    	line-height: 2em;
+	}
+
+	.service-grid-right-content p {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE About.html PAGE **********************/
+	.resume-list-content-holder {
+		padding: 3em 8em;
+	}
+
+	.experience-info-panel-inner {
+    	padding: 1em 1em;
+	}
+
+	.right-side-header-bold p {
+    	line-height: 1.6em;
+	}
+
+	.right-side-header-bold h2 {
+    	padding-bottom: 1em !important;
+	}
+
+	.services-text-column .sub-text {
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE index.php PAGE **********************/
+	.inner-about-panel {
+			background-position: 2px -102px;
+	}
+		/***************** End of @media screen and (max-width: 1299px) and (min-width: 1200px) **********************/
+}
+
+/* -- 7 desktop larger than 1300 -- */
+@media screen and (min-width: 1300px) {
+	.expanded-mobile-menu {
+		display: none;
+	}
+
+	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
+		position: relative !important;
+	} 
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.contact-me {
+		margin: 0;
+		padding: 0 48px;
+	}
+
+	.contact-page-panel-left {
+
+	}
+
+	.contact-page-panel-right {
+		width: 96vw;
+	}
+
+	.toggle-links {
+		margin: 0rem auto 0 auto;
+	}
+
+	.form-1 .form-group {
+	    margin: 0;
+	    margin-right: 12px;
+   	 	width: 96.8%;
+	}
+
+	.form-1 .form-control {
+	    margin: 0;
+	    width: 96%;
+	    font-size: 0.7em;
+	    height: auto;
+		padding: 2em 0 2em 1em;
+	}
+	.form-1 .text-box-size {
+	    width: 100%;
+	    padding: 19px 0px 0 7px;
+	    padding: 1rem .5rem;
+	    height: 40px;
+	    font-size: 0.9em;
+	}
+
+	.form-1 .form-row {
+		padding: 0 0 1em 0;
+	}
+
+	.form-2 .form-control {
+    	width: 100%;
+    	font-size: .9em;
+    	height: inherit;
+    	padding: 2em 0 2em 1em;
+
+	}
+
+	.box-size {
+		margin-right: 12px;
+	}
+
+	.row {
+		margin: 0;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.space {
+		height: 16px;
+	}
+
+	.form-2 .text-seperator {
+	    margin: 48px 0;
+	}
+
+	.form-row-inner {
+	    margin-right: 8px;
+	}
+
+	.form-row-inner label {
+    	padding: 1.5em;
+	}
+
+	.form-row label:before {
+	    width: 13.2%;
+	    height: 55%;
+	}
+
+	.form-row label:after {
+    	left: 78.5%;
+    	width: 7px;
+    	height: 26px;
+	}
+
+	.form-row-inner label span {
+	    font-size: .7em;
+	}
+
+	.form-2 .form-group {
+		margin: 0;
+	    padding: 0 20px 0 0;
+		
+	}
+	/***************** STYLES THE Services.html PAGE **********************/
+	.hdr-lg h1 {
+		font-size: 48px;
+	}
+
+	.services-welcome-info-container .services-text-column {
+		padding: 3em 18em;
+	}
+
+	.services-welcome-info-sub {
+    	width: 100%;
+	}
+
+	.services-text-column .sub-text {
+    	font-size: 1.2em;
+	}
+
+	.service-grid {
+	    display: flex;
+	    flex-direction: row;
+		padding: 1em 5em;
+	    text-align: center;
+	}
+
+	.service-grid-left-content p {
+    	line-height: 2em;
+    	font-size: 1.2em;
+	}
+
+	.service-grid-right-content p {
+    	font-size: 1.2em;
+    	line-height: 2em;
+	}
+
+	/***************** STYLES THE About.html PAGE **********************/
+	.resume-list-content-holder {
+		padding: 2em 12em;
+	}
+
+	.experience-info-panel-inner {
+    	padding: 1em 1em;
+	}
+
+	.right-side-header-bold p {
+    	line-height: 1.6em;
+	}
+
+	.right-side-header-bold h2 {
+    	padding-bottom: 1em !important;
+	}
+
+	.services-text-column .sub-text {
+    	line-height: 2em;
+	}
+
+		/***************** STYLES THE index.php PAGE **********************/
+	.inner-about-panel {
+			background-position: 2px -102px;
+	}
+
+	.services-content {
+		padding: 2em 5em;
+	}
+
+	.portfolio-container {
+		padding: 2em 5em;	
+	}
+
+	.process-content {
+		padding: 2em 5em;	
+	}
+
+	.contact-panel-inner {
+		padding: 2em 5em;
+	    width: 100%;
+	}
+
+	.testimonials-outer {
+    	padding: 0 15em 0 0;
+	}
+
+}
+
+		/***************** End of @media screen and (min-width: 1300px)  **********************/
