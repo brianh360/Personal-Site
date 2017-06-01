@@ -22,6 +22,137 @@
 
 
 
+$(document).ready(function() {
+
+	$("form").submit(function(e) {
+
+    var ref = $(this).find("[required]");
+
+    $(ref).each(function(){
+        if ( $(this).val() == '' )
+        {
+            alert("Required field should not be blank.");
+
+            // $(this).focus();
+
+            e.preventDefault();
+            return false;
+        }
+    });  return true;
+});
+
+	var close = $('.close-mobile-menu-overlay');
+	var open = $('.menu-toggle');
+	var overlay = $('.mobile-menu-overlay');
+	var menu = $('.movement-menu');
+	var copyright = $('.mobile-menu-copyright');
+
+	$(open).bind('click', function () {
+		$(overlay).addClass("mobile-menu-overlay-active");
+		$(open).css('display', 'none');
+		$(close).css('display', 'block');
+		$(menu).addClass('menu-open-active');
+		$(copyright).addClass('mobile-menu-copyright-active');
+	});
+
+	$(close).bind('click', function () {
+		$(overlay).addClass("mobile-menu-overlay-active");
+		$(open).css('display', 'none');
+		$(close).css('display', 'block');
+		$(menu).addClass('menu-open-active');
+		$(copyright).addClass('mobile-menu-copyright-active');
+
+		overlay.removeClass('mobile-menu-overlay-active');
+		$(open).css('display', 'block');
+		$(close).css('display', 'none');
+		$(menu).removeClass('menu-open-active');
+		$(copyright).removeClass('mobile-menu-copyright-active');
+	});
+});
+
+	var contactNav = Array.from(document.querySelectorAll('.toggle-links a'));
+	var form1 = document.querySelector('.form-1');
+	var form2 = document.querySelector('.form-2');
+
+	if (form1) {
+
+		form1.classList.add('form-active');
+		contactNav[0].classList.add('contact-active');
+	}
+		function contactFlip () {
+			if (!contactNav)return;
+			contactNav[0].classList.remove('contact-active');
+			contactNav[1].classList.remove('contact-active');
+			form1.classList.remove('form-active');
+			form2.classList.remove('form-active');
+
+			this.classList.add('contact-active');
+
+			if (this == contactNav[0])
+			{
+				form1.classList.add('form-active');
+			} else {
+				form2.classList.add('form-active');
+			}
+
+	var deliverables = document.querySelector('input[name="deliverables"]');
+	var checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+	var clickToggle = 0;
+	var lastClicked;
+
+	if (checkboxes)
+	{
+		checkboxes.forEach(function (box) {
+
+			box.addEventListener('click', sendDeliverables);
+		});
+
+		function sendDeliverables () {
+
+			if (lastClicked == this.value)
+			{
+				deliverables.value = "";
+				lastClicked = "";
+
+				checkboxes.forEach(function (boxes) {
+
+					if (boxes.checked)
+					{
+						deliverables.value = boxes.defaultValue;
+						lastClicked = deliverables.value;
+					}
+				});
+				return;
+			}
+
+			deliverables.value = this.value;
+			console.log(deliverables.value);
+
+			clickToggle++;
+			lastClicked = this.value;
+		}
+	}
+}
+	contactNav.forEach( function (navbutton){
+		navbutton.addEventListener('click', contactFlip);
+	});
+
+	var labels = Array.from(document.querySelectorAll('.form-row-inner label'));
+	var labelContent = Array.from(document.querySelectorAll('label span'));
+	
+
+	function addHighlight (e) {
+		if (e.target.matches('input'))return;
+		var spanToChange = this.querySelector('span');
+
+		this.classList.toggle('label-active');
+		spanToChange.classList.toggle('wht');
+	}
+
+	labels.forEach(function (label) {
+		label.addEventListener('click', addHighlight);
+	});
+
 
 ! function(window, document, $) {
 
@@ -295,13 +426,13 @@
 
 				// ----- this part is optional ----- //
 				// check string array position
-				// on the first string, only delete one word
+				// on the first string, only devare one word
 				// the stopNum actually represents the amount of chars to
 				// keep in the current string. In my case it's 14.
 				// if (self.arrayPos == 1){
 				//  self.stopNum = 14;
 				// }
-				//every other time, delete the whole typed string
+				//every other time, devare the whole typed string
 				// else{
 				//  self.stopNum = 0;
 				// }
