@@ -3,7 +3,6 @@ if (isset($_POST["submit"])) {
 
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $mobile = $_POST['mobile'];
   $message = $_POST['message'];
 
   $from = 'Website Contact Form';
@@ -63,11 +62,11 @@ if (!$errName && !$errEmail) {
     <div class="mobile-menu-overlay">
       <div class="menu">
             <ul class="movement-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-             <li> <a href="#">Contact</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+             <li> <a href="contact.php">Contact</a></li>
             </ul>
             <p class="footer-copyright mobile-menu-copyright">Copyright © Your Company 2017. All Rights Reserved
           </div>
@@ -81,8 +80,8 @@ if (!$errName && !$errEmail) {
           <i class="fa fa-bars menu-toggle" aria-hidden="true"></i>
           <i class="fa fa-times close-mobile-menu-overlay" aria-hidden="true"></i>
         </a>
-        <a href="#" class="menu-logo">
-          <img src="http://262fdo1ay0gn2mr7xv1y7xfv.wpengine.netdna-cdn.com/wp-content/themes/orourke-twig/assets/images/orourke-logo-white.svg">
+        <a href="index.php" class="menu-logo">
+          <img src="Source/css/logo2.png">
         </a>
           
       </div>
@@ -97,29 +96,18 @@ if (!$errName && !$errEmail) {
                 <p id="here"><span style="color:#5c7079; font-weight:bold;">I'm at my desk !</span>
               </div>
               <div class="about-panel-top-inner-right">
-                <p class="displayPhone" style="color: #5c7079;"> Give me a call: <span style="color:#5c7079; font-weight:bold;"><i class="fa fa-phone" aria-hidden="true"></i> (555) 726-3819</span>
+                <p class="displayPhone" style="color: #5c7079;"> Give me a call: <span style="color:#5c7079; font-weight:bold;"><a href="tel:"<i class="fa fa-phone" aria-hidden="true"></i> (555) 726-3819</a></span>
               </div>
             </div>
             
           </div>
 
-            <div class="floating-nav-outer">
-              <div class="floating-nav-inner">
-                <div class="floating-nav-inner-levels">
-                  <ul>
-                    <a href="services.html"><li>About</li></a>
-                    <a href="#"><li style="background-color: black;border-top: 1px white solid;border-bottom: 1px white solid;">Experience</li></a>
-                    <a href="#"><li>Services</li></a>
-                    <a href="#"><li>Projects</li></a>
-                    <a href="#"><li>Contact</li></a>
-                  </ul>
-                </div>
-              </div>
-            </div>
+
           <div class="about-content">
                 <a href="#">
                 <div class="header-holder">
-                <h1 class="hero">Brian Hurst</h1><br>
+                <img style="height: 150px; width: 200px; margin: 10%;" src="Source/css/3(web-sized).png"></img>
+<!--                 <h1 class="hero">Brian Hurst</h1><br> -->
                 <h2 class="sub-head element">A Creative</span> Web Tech<span style="color:#fff"></span></h2>
                 </div></a>
                 <hr class="intro-divider">
@@ -130,7 +118,7 @@ if (!$errName && !$errEmail) {
                           </ul>
             
           </div>
-          <a href="#about">
+          <a href="#content">
                <svg class="arrows">
               <path class="a1" d="M0 0 L30 32 L60 0"></path>
               <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -141,7 +129,7 @@ if (!$errName && !$errEmail) {
       </div>
 
 <!-- Services Panel -->
-      <div class="services-panel panel">
+      <div class="services-panel panel" id="content">
         <div class="inner-panel">
           <div class="services-content">
             <div class="services-container">
@@ -155,7 +143,9 @@ if (!$errName && !$errEmail) {
                 <h2 class="hdr-text">How Can I Help You?</h2>
                 </div>
                 <div class="services-sub">
-                  <p class="sub-text">I have a knack for solving web puzzles and problems. (I also like to do the simple stuff). I went to school for programming so once in a while I'll write some code too. Get quick web help today!</p>
+                   <p class="sub-text">I can build you a beautiful and <a class="lightblue" href="#link-to-blog-post">responsive mobile-friendly website</a>. If you're problem requires <a class="lightblue" href="#link-to-blog-post">web assistance</a> such as learning to
+<a class="lightblue" href="#link-to-blog-post">create a gallery in Wordpress</a>, I can do that too. Click the button below to find
+out all the ways I can help you!</p>
                 </div>
                 <a href="services.html"><button class="button">Learn More</button></a>
               </div>
@@ -192,7 +182,11 @@ if (!$errName && !$errEmail) {
                             by Brian Hurst</h2>
                         </div>
                         <div class="sub">
-                  <p class="sub-text">I design beautiful, responsive, Web and Mobile ready websites like dominos pizza. The wait is minimal and the product is always fresh. Check out some of the awesome stuff I've done already!</div>
+                  <p class="sub-text">How do you know you'll get an awesome website? Because I've done it countless times
+for my other clients! All of my websites are desktop and mobile friendly, 
+and are built with
+either the latest <a class="lightblue" href="#link-to-blog-post">premium Wordpress themes</span></a>, or <a class="lightblue" href="#link-to-blog-post">HTML5</span></a>, <a class="lightblue" href="#link-to-blog-post">CSS/CSS3</span></a>, 
+and <a class="lightblue" href="#link-to-blog-post">Javascript/Jquery</span>.</a></p></div>
                 <a href="portfolio.html"><button class="button">Learn More</button></a>
                     </div>
                 </div>
@@ -211,10 +205,12 @@ if (!$errName && !$errEmail) {
                           <div class="text-seperator"></div>
                           </div>
                             <div class="">
-                          <h2 class="hdr-text">I Worked Hard For This!</h2>
+                          <h2 class="hdr-text">A Quick Life Story</h2>
                               <div class="sub">
-                  <p class="sub-text">Well, honestly I didn't. But! If you're still reading this far you must be at least a little curious. Click the button below and find out why I'm perfect for your next project!
-
+                  <p class="sub-text">Here you can learn all about me, if you're in to that kind of stuff... I will warn you
+though, it is just walls and walls of text, all about me. Truthfully to get to know
+me, I think you're better off sending an email 
+<a class="lightblue" href="mailto:therealbrianhurst@gmail.com">Hello there!</a> 
 </div>
                   <a href="about.html"><button class="button">Learn More</button></a>
                     </div>
@@ -247,15 +243,12 @@ if (!$errName && !$errEmail) {
           <div class="form-group">
             <input type="email" class="form-control" id="email" name="email" placeholder="Email*" required>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-          </div>
+ 
                     <div class="form-group">
                     <textarea class="form-control" name="message" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
                         <span class="help-block"><p id="characterLeft" class="help-block ">What's on your mind?</p></span>                    
                     </div>
-            
-        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" value="Send">Submit Form</button>
+         <input id="submit" name="submit" type="submit" class="btn btn-primary pull-right" value="Submit Form"></input>
         </form>
     </div>
 </div>
@@ -372,13 +365,13 @@ if (!$errName && !$errEmail) {
           <div class="footer-content">
             <div class="footer-nav">
               <ul style="display: inline-flex;">
-                <a href="index.html" target="_blank"><li class="footer-nav-list">Home</li></a>
+                <a href="index.php"><li class="footer-nav-list">Home</li></a>
                 <li style="font-size: 14px;">&#9642;</li>
-                <a href="about.html" target="_blank"><li class="footer-nav-list">About</li></a>
+                <a href="about.html"><li class="footer-nav-list">About</li></a>
                 <li style="font-size: 14px;">&#9642;</li>
-                <a href="services.html" target="_blank"><li class="footer-nav-list">Services</li></a>
+                <a href="services.html"><li class="footer-nav-list">Services</li></a>
                 <li style="font-size: 14px;">&#9642;</li>
-                <a href="contact.html" target="_blank"><li class="footer-nav-list">Contact</li></a>
+                <a href="contact.php"><li class="footer-nav-list">Contact</li></a>
               </ul>
               <p class="footer-copyright">Copyright © Your Company 2017. All Rights Reserved
               </p>
@@ -392,7 +385,7 @@ if (!$errName && !$errEmail) {
     </div>
   </body>
     <link rel="stylesheet" href="Source/css/style.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <script type="text/javascript" src="Source/js/script.js"></script>
         <script type="text/javascript" src="Source/js/typed.js"></script>
 
