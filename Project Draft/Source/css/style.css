@@ -126,6 +126,10 @@ legend {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.text-center {
+	text-align: center;
+}
+
 .hl {
 	    color: #438392 !important; 
 }
@@ -2062,7 +2066,9 @@ display: block !important;
   text-decoration: none;
 }
 .navbar-brand > img {
-  display: block;
+    display: block;
+    height: 30px;
+    width: 114px;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -2287,8 +2293,8 @@ display: block !important;
 .navbar-default .navbar-brand {
     border: 1px solid #fff;
     border-radius: 4px;
-    height: 21px;
-    width: 89px;
+    height: auto;
+    width: 109px;
   	color: #777;
 }
 .navbar-default .navbar-brand:hover,
@@ -3275,31 +3281,84 @@ text-align: center;
 	
 }
 
-.portfolio-container-1 {
-
+.portfolio-row {
+	display: flex;
+	flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.portfolio-container-1-inner {
-	padding: 3em;
+.column {
+	padding: 0 .28em;
+	flex: 1;
 }
 
-.portfolio-container-content-holder {
-	padding: 2em 5em;
+.table {
+	width: 100%;
+	height: 100%;
 }
 
-.portfolio-container-content {
 
+
+.column img{
+	width: 100%;
 }
 
-.portfolio-container-content p {
-    font-size: 1.3em;
-    line-height: 1.9em;
+.image-holder {
+	position: relative;
+	height: 100%;
+	width: 100%;
 }
+
+.image-holder .cell {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	color: #fff;	
+}
+
+.image-holder:hover .cell {
+	display: flex;
+    background-color: rgba(0, 0, 0, 0.67);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-holder:hover h4 {
+    padding: 1em;
+    cursor: pointer;
+}
+
+.portfolio-row .expanded {
+    max-width: none;
+}
+
+.cell {
+    font-size: 2em;
+    font-weight: 600;
+	border: 1px transparent solid;
+	text-transform: capitalize;
+	 border-top-color: #fff;
+	border-bottom-color: #fff;
+}
+
+.image-holder:hover .cell-holder {
+	width: 100%;
+	height: auto;
+	border: 1px transparent solid;
+	text-transform: capitalize;
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+}
+
 
 .black-bar-seperator {
 	width: 100%;
 	height: auto;
-	background: #000;
+	background: rgb(66, 139, 202);
 }
 
 .black-bar-seperator p {
@@ -3312,13 +3371,13 @@ text-align: center;
     padding: .62em;
     letter-spacing: .8px;
 }
-.portfolio-container-2-row {
-	display: flex;
-	flex-direction: row;
+
+.portfolio-container-content {
+	padding: 3em 8em;
 }
 
-.portfolio-container-row-inner {
-
+.portfolio-container-content p{
+	font-size: 1.3em;
 }
 
 .portfolio-page-panel-outer{
@@ -3426,10 +3485,9 @@ font-size: 32px;
 	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
 	}
 
-	body#portfolio.index header {
-	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
-	background-size: 1338.46px 800px;
-}
+	.contact-page-panel-left-content {
+		padding: 1em 1.3em;
+	}
 	.footer-content {
 		text-align: center;
 		padding: 0;
@@ -3455,11 +3513,15 @@ font-size: 32px;
 	}
 
 	.contact-page-panel-left {
-		display: none;
+
 	}
 
 	.contact-page-panel-right {
-		width: 96vw;
+		display: none;
+	}
+
+	.contact-personal-image {
+		width: 100%;
 	}
 
 	.toggle-links {
@@ -3555,6 +3617,46 @@ font-size: 32px;
 		display: none;
 	}
 	/***************** STYLES THE Portfolio.html PAGE **********************/
+	body#portfolio.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
+	background-size: 1338.46px 800px;
+	}
+
+	.portfolio-container-content {
+		display: none;
+	}
+
+	.black-bar-seperator {
+	    background: rgb(66, 139, 202);
+	}
+
+	.portfolio-row {
+    	flex-direction: column;
+	}
+
+	.image-holder .cell {
+	    display: flex;
+	    background-color: rgba(0, 0, 0, 0.58);
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.image-holder .cell-holder {
+	    width: 100%;
+	    height: auto;
+	    border: 1px transparent solid;
+	    text-transform: capitalize;
+	    border-top-color: #fff;
+	    border-bottom-color: #fff;
+	}
+
+	.image-holder:hover .cell {
+
+	}
+
+	.image-holder:hover .cell-holder {
+
+	}
 
 	/***************** STYLES THE Services.html PAGE **********************/
 	body#services.index header {
@@ -3642,6 +3744,11 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE index.php PAGE **********************/
+	.header-logo {
+		height: 150px; 
+		width: 200px; 
+		margin: 10%;
+	}
 	.testimonials-wix {
 	    left: -6px;
 	    top: -47px;
@@ -3756,6 +3863,10 @@ font-size: 32px;
 	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
 	}
 
+	.contact-page-panel-left-content {
+		padding: 1em 1.3em;
+	}
+
 	.contact-page-panel-right-inner {
 		padding: 24px 0;
 	}
@@ -3778,12 +3889,13 @@ font-size: 32px;
 	}
 
 	.contact-page-panel-left {
-		display: none;
+
 	}
 
 	.contact-page-panel-right {
-		width: 96vw;
+		display: none;
 	}
+
 
 	.toggle-links {
 		margin: 0rem auto 0 auto;
@@ -3875,6 +3987,10 @@ font-size: 32px;
 	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
 	}
 
+	.text-seperator {
+		margin: 1em 0 3em !important;
+	}
+
 	.hdr-lg h1 {
 		font-size: 48px;
 	}
@@ -3947,6 +4063,17 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE index.php PAGE **********************/
+	.button-dropdown-outer {
+		display: none;
+	}
+
+	.header-logo {
+		height: 150px;
+	    width: 200px;
+	    margin: 6%;
+	    margin-top: 0;
+	}
+
 	.about-panel-top {
 		display: none;
 	}
@@ -4033,6 +4160,10 @@ font-size: 32px;
 		padding: 24px 0;
 	}
 
+	.contact-page-panel-left-content {
+		padding: 1em 1.3em;
+	}
+
 	.navbar {
 		display: none;
 	}
@@ -4051,11 +4182,11 @@ font-size: 32px;
 	}
 
 	.contact-page-panel-left {
-		display: none;
+
 	}
 
 	.contact-page-panel-right {
-		width: 96vw;
+		display: none;
 	}
 
 	.toggle-links {
@@ -4161,6 +4292,11 @@ font-size: 32px;
 	.services-text-column .sub-text {
     	font-size: 1em;
 	}
+
+	.services-text-column .text-seperator{
+		margin-bottom: 3em;
+	}
+
 	.service-grid {
 	    display: flex;
 	    flex-direction: row;
@@ -4178,9 +4314,8 @@ font-size: 32px;
 
 	/***************** STYLES THE About.html PAGE **********************/
 	body#about.index header {
-    background-size: 938.46px 800px;
-    background-position: -330px 45px;
-    background-image: url(tomas-jasovsky-178485.jpg);
+		background-position: 0px -193px;
+    	background-image: url(tomas-jasovsky-178485.jpg);
 	}
 
 	.experience-info-panel-inner {
@@ -4197,9 +4332,61 @@ font-size: 32px;
 
 	.services-text-column .sub-text {
     	line-height: 2em;
+
 	}
 
-	/***************** STYLES THE index.php PAGE **********************/.
+	/***************** STYLES THE Portfolio.html PAGE **********************/
+	body#portfolio.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
+	background-size: 1338.46px 800px;
+	}
+
+	.portfolio-container-content {
+		display: none;
+	}
+
+	.black-bar-seperator {
+	    background: rgb(66, 139, 202);
+	}
+
+	.portfolio-row {
+    	flex-direction: column;
+	}
+
+	.image-holder .cell {
+	    display: flex;
+	    background-color: rgba(0, 0, 0, 0.58);
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.image-holder .cell-holder {
+	    width: 100%;
+	    height: auto;
+	    border: 1px transparent solid;
+	    text-transform: capitalize;
+	    border-top-color: #fff;
+	    border-bottom-color: #fff;
+	}
+
+	.image-holder:hover .cell {
+
+	}
+
+	.image-holder:hover .cell-holder {
+
+	}
+
+	/***************** STYLES THE index.php PAGE **********************/
+
+	.button-dropdown-outer {
+		display: none;
+	}
+	.header-logo {
+		height: 150px;
+	    width: 200px;
+	    margin: 0 10% 5%;
+	}
 
 	.inner-about-panel {
 		background-position: -298px -251px;
@@ -4274,10 +4461,17 @@ font-size: 32px;
 /* -- 4 landscape tablets 1000-768 -- */
 @media screen and (max-width: 999px) and (min-width: 768px) {
 	/***************** STYLES THE CONTACT.PHP PAGE **********************/
+	body#contact.index header {
+	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
+	}
 
 	.navbar .navbar-default .navbar-custom .navbar-fixed-top {
 		position: relative !important;
 	} 
+
+	.contact-page-panel-left-content {
+    	padding: 3em 1.3em;
+	}
 
 	.navbar-toggle {
 		display: none;
@@ -4289,11 +4483,11 @@ font-size: 32px;
 	}
 
 	.contact-page-panel-left {
-		display: none;
+
 	}
 
 	.contact-page-panel-right {
-		width: 96vw;
+		display: none;
 	}
 
 	.toggle-links {
@@ -4379,10 +4573,13 @@ font-size: 32px;
 		
 	}
 	/***************** STYLES THE Services.html PAGE **********************/
+	body#services.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
+	}
+
 	.hdr-lg h1 {
 		font-size: 48px;
 	}
-
 
 	.services-welcome-info-container .services-text-column {
 		padding: 3em .5em;
@@ -4411,6 +4608,19 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE About.html PAGE **********************/
+	.navbar {
+		display: none;
+	}
+
+	.about-us-personal-image {
+   		display: none;
+	}
+
+	body#about.index header {
+		background-image: url(tomas-jasovsky-178485.jpg);
+
+	}
+
 	.resume-list-content-holder {
 	    padding: 3em;
 	}
@@ -4428,15 +4638,68 @@ font-size: 32px;
 
 	.services-text-column .sub-text {
     	line-height: 2em;
+    	padding: 0 3em;
+	}
+
+	/***************** STYLES THE Portfolio.html PAGE **********************/
+	body#portfolio.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
+	background-size: 1338.46px 800px;
+	}
+
+	.portfolio-container-content {
+		display: none;
+	}
+
+	.black-bar-seperator {
+	    background: rgb(66, 139, 202);
+	}
+
+	.portfolio-row {
+    	flex-direction: column;
+	}
+
+	.image-holder .cell {
+	    display: flex;
+	    background-color: rgba(0, 0, 0, 0.58);
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.image-holder .cell-holder {
+	    width: 100%;
+	    height: auto;
+	    border: 1px transparent solid;
+	    text-transform: capitalize;
+	    border-top-color: #fff;
+	    border-bottom-color: #fff;
+	}
+
+	.image-holder:hover .cell {
+
+	}
+
+	.image-holder:hover .cell-holder {
+
+	}
+
+
+	.black-bar-seperator p {
+    	font-size: 1.3em;
 	}
 
 	/***************** STYLES THE index.php PAGE **********************/
+	.header-logo {
+		height: 150px;
+	    width: 200px;
+	    margin: 0 10% 5%;
+	}
+
 	.inner-about-panel {
 			background-position: 2px -102px;
 	}
 
 	.expanded-mobile-menu {
-		display: none;
 	}
 
 	.about-panel-top-inner-left {
@@ -4506,6 +4769,9 @@ font-size: 32px;
 	
 		/***************** End of @media screen and (max-width: 1199px) and (min-width: 1000px) **********************/
 		/***************** STYLES THE CONTACT.PHP PAGE **********************/
+	body#contact.index header {
+	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
+	}
 	.expanded-mobile-menu {
 		display: none;
 	}
@@ -4615,6 +4881,11 @@ font-size: 32px;
 	}
 
 /***************** STYLES THE About.html PAGE **********************/
+	body#about.index header {
+		background-image: url(tomas-jasovsky-178485.jpg);
+		background-position: 0px -118px;
+	}
+
 	.experience-info-panel-inner {
     	padding: 2em 4em;
 	}
@@ -4632,7 +4903,67 @@ font-size: 32px;
 	}
 
 	.inner-about-panel {
-			background-position: 2px -102px;
+		background-position: 2px -102px;
+	}
+
+	/***************** STYLES THE services.html PAGE **********************/
+
+	body#services.index header {
+		background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
+	}
+
+	/***************** STYLES THE Portfolio.html PAGE **********************/
+	body#portfolio.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
+	background-size: 1338.46px 800px;
+	}
+
+	.portfolio-container-content {
+		display: none;
+	}
+
+	.black-bar-seperator {
+	    background: rgb(66, 139, 202);
+	}
+
+	.portfolio-row {
+    	flex-direction: column;
+	}
+
+	.image-holder .cell {
+	    display: flex;
+	    background-color: rgba(0, 0, 0, 0.58);
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.image-holder .cell-holder {
+	    width: 100%;
+	    height: auto;
+	    border: 1px transparent solid;
+	    text-transform: capitalize;
+	    border-top-color: #fff;
+	    border-bottom-color: #fff;
+	}
+
+
+	.image-holder:hover .cell {
+
+	}
+
+	.image-holder:hover .cell-holder {
+
+	}
+
+	.black-bar-seperator p {
+    	font-size: 1.3em;
+	}
+
+/***************** STYLES THE index.php PAGE **********************/
+	.header-logo {
+		height: 150px;
+	    width: 200px;
+	    margin: 0 10% 5%;
 	}
 
 
@@ -4640,6 +4971,9 @@ font-size: 32px;
 
 		/* -- 6 laptops 1300-1200 -- */
 @media screen and (max-width: 1299px) and (min-width: 1200px) {
+	body#contact.index header {
+	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
+	}
 
 	.expanded-mobile-menu {
 		display: none;
@@ -4749,6 +5083,10 @@ font-size: 32px;
 		
 	}
 	/***************** STYLES THE Services.html PAGE **********************/
+	body#services.index header {
+		background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
+	}
+
 	.hdr-lg h1 {
 		font-size: 48px;
 	}
@@ -4781,6 +5119,11 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE About.html PAGE **********************/
+	body#about.index header {
+		background-image: url(tomas-jasovsky-178485.jpg);
+		background-position: 0 -214px;
+	}
+
 	.resume-list-content-holder {
 		padding: 3em 8em;
 	}
@@ -4801,15 +5144,43 @@ font-size: 32px;
     	line-height: 2em;
 	}
 
+	/***************** STYLES THE Portfolio.html PAGE **********************/
+	body#portfolio.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
+	background-size: 1338.46px 800px;
+	}
+
+	.portfolio-container-content {
+	}
+
+	.image-holder:hover .cell-holder {
+	    width: 100%;
+	    height: auto;
+	    border: 1px transparent solid;
+	    text-transform: capitalize;
+	    border-top-color: #fff;
+	    border-bottom-color: #fff;
+	}
+
+
 	/***************** STYLES THE index.php PAGE **********************/
 	.inner-about-panel {
-			background-position: 2px -102px;
+		background-position: 2px -102px;
+	}
+
+	.header-logo {
+		height: 150px;
+	    width: 200px;
+	    margin: 0 10% 5%;
 	}
 		/***************** End of @media screen and (max-width: 1299px) and (min-width: 1200px) **********************/
 }
 
 /* -- 7 desktop larger than 1300 -- */
 @media screen and (min-width: 1300px) {
+	body#contact.index header {
+	    background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/10/header-images-digitalmarketing.jpg)
+	}
 	.expanded-mobile-menu {
 		display: none;
 	}
@@ -4920,6 +5291,10 @@ font-size: 32px;
 		
 	}
 	/***************** STYLES THE Services.html PAGE **********************/
+	body#services.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/04/header-images-ourapproach.jpg);
+	}
+
 	.hdr-lg h1 {
 		font-size: 48px;
 	}
@@ -4954,6 +5329,10 @@ font-size: 32px;
 	}
 
 	/***************** STYLES THE About.html PAGE **********************/
+	body#about.index header {
+		background-image: url(tomas-jasovsky-178485.jpg);
+	}
+
 	.resume-list-content-holder {
 		padding: 2em 12em;
 	}
@@ -4998,6 +5377,20 @@ font-size: 32px;
 
 	.testimonials-outer {
     	padding: 0 15em 0 0;
+	}
+
+	.header-logo {
+		height: 150px;
+	    width: 200px;
+	    margin: 0 10% 5%;
+	}
+
+	/***************** STYLES THE Portfolio.html PAGE **********************/
+	body#portfolio.index header {
+	background-image: url(http://www.orourkehospitality.com/wp-content/uploads/2013/06/header-images-work-new-1.jpg);
+	}
+
+	.portfolio-container-content {
 	}
 
 }
