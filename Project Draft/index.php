@@ -42,7 +42,7 @@ if (!$errName && !$errEmail) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Draft Title</title>
+    <title>Brian Hurst | Web Designer &amp; Developer</title>
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="http://designers.hubspot.com/hs-fs/hub/327485/file-2054199286-css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:300" rel="stylesheet">
