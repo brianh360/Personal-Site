@@ -391,34 +391,3 @@ button.addEventListener('click', displayMessage);
 }
 }
 
-var contactNav = $('.toggle-links a');
-			var form1 = $('.form-1');
-			var form2 = $('.form-2');
-			var deliverables = $('input[name="deliverables"]');
-			var checkboxes = $('input[type="checkbox"]');
-			console.log(checkboxes);
-			var clickToggle = 0;
-			var lastClicked;
-
-			$(form1).addClass('form-active');
-			$(contactNav).first().addClass('contact-active');
-
-
-			$(contactNav).each( function (navbutton) {
-				navbutton.bind('click', function () {
-
-
-				$(contactNav).first().removeClass('contact-active');
-				$(contactNav).last().removeClass('contact-active');
-				$(form1).removeClass('form-active');
-				$(form2).removeClass('form-active');
-
-
-				this.addClass('contact-active');
-
-				if (this == contactNav.first())
-				{
-					$(form1).addClass('form-active');
-				} else {
-					$(form2).addClass('form-active');
-				}
